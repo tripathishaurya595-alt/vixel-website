@@ -1,0 +1,282 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red241\green236\blue230;\red28\green28\blue26;}
+{\*\expandedcolortbl;;\cssrgb\c95686\c94118\c92157;\cssrgb\c14510\c14510\c13725;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <meta name="description" content="Learn how a website is actually made from scratch. A simple, jargon-free guide covering domains, hosting, design, development, and launch. Perfect for business owners who want to understand the process before hiring a web developer.">\
+    <meta name="keywords" content="how to make a website, how websites are made, website development process, website design process, how to build a website for business, website creation guide, web development steps, website for beginners India">\
+    <meta name="author" content="Vixel">\
+    <meta name="robots" content="index, follow">\
+    <link rel="canonical" href="https://vixel.in/blog/how-a-website-is-made">\
+\
+    <meta property="og:title" content="How a Website is Actually Made: The Complete Beginner's Guide | Vixel Blog">\
+    <meta property="og:description" content="A simple, jargon-free guide to how modern websites are built. Perfect for business owners.">\
+    <meta property="og:type" content="article">\
+    <meta property="og:url" content="https://vixel.in/blog/how-a-website-is-made">\
+    <meta property="og:image" content="https://vixel.in/blog/og-how-website-made.jpg">\
+\
+    <title>How a Website is Actually Made: The Complete Beginner's Guide | Vixel Blog</title>\
+\
+    <script type="application/ld+json">\
+    \{\
+        "@context": "https://schema.org",\
+        "@type": "BlogPosting",\
+        "headline": "How a Website is Actually Made: The Complete Beginner's Guide",\
+        "description": "A simple, jargon-free guide covering domains, hosting, design, development, and launch for business owners.",\
+        "author": \{"@type": "Organization", "name": "Vixel", "url": "https://vixel.in"\},\
+        "publisher": \{"@type": "Organization", "name": "Vixel", "logo": \{"@type": "ImageObject", "url": "https://vixel.in/logo.png"\}\},\
+        "datePublished": "2026-03-15",\
+        "dateModified": "2026-03-15",\
+        "mainEntityOfPage": \{"@type": "WebPage", "@id": "https://vixel.in/blog/how-a-website-is-made"\},\
+        "image": "https://vixel.in/blog/og-how-website-made.jpg",\
+        "wordCount": "1100",\
+        "keywords": "how to make a website, website development process, web design guide"\
+    \}\
+    </script>\
+\
+    <link rel="preconnect" href="https://fonts.googleapis.com">\
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">\
+\
+    <style>\
+        *, *::before, *::after \{ margin: 0; padding: 0; box-sizing: border-box; \}\
+        :root \{\
+            --bg: #0a0a0a; --bg-card: #161616; --accent: #6C5CE7;\
+            --accent-glow: #a78bfa; --accent-light: rgba(108, 92, 231, 0.1);\
+            --text: #ffffff; --text-sec: #94a3b8; --text-muted: #64748b;\
+            --border: rgba(255,255,255,0.06); --border-accent: rgba(108,92,231,0.3);\
+            --font: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif;\
+        \}\
+        html \{ scroll-behavior: smooth; \}\
+        body \{ font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.8; \}\
+        a \{ color: var(--accent-glow); text-decoration: none; \}\
+        a:hover \{ text-decoration: underline; \}\
+\
+        /* NAV */\
+        .blog-nav \{\
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);\
+            z-index: 1000; background: rgba(10,10,10,0.4);\
+            backdrop-filter: blur(24px); border: 1px solid var(--border);\
+            border-radius: 9999px; padding: 12px 24px;\
+            display: flex; align-items: center; justify-content: space-between;\
+            width: calc(100% - 40px); max-width: 800px;\
+        \}\
+        .blog-nav-logo \{ font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; color: var(--text); \}\
+        .blog-nav-logo span \{ width: 28px; height: 28px; background: linear-gradient(135deg, var(--accent), var(--accent-glow)); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; \}\
+        .blog-nav-back \{ font-size: 0.85rem; color: var(--text-sec); padding: 6px 16px; border: 1px solid var(--border); border-radius: 9999px; transition: 0.3s; \}\
+        .blog-nav-back:hover \{ border-color: var(--accent); color: var(--text); text-decoration: none; \}\
+\
+        /* ARTICLE */\
+        .blog-article \{ max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; \}\
+        .blog-article-tag \{ display: inline-block; padding: 4px 12px; background: var(--accent-light); color: var(--accent-glow); border-radius: 9999px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; \}\
+        .blog-article h1 \{ font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.02em; \}\
+        .blog-article-meta \{ font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; display: flex; align-items: center; gap: 16px; \}\
+        .blog-article-meta span \{ display: flex; align-items: center; gap: 6px; \}\
+        .blog-article h2 \{ font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin: 48px 0 16px; color: var(--text); \}\
+        .blog-article h3 \{ font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 32px 0 12px; color: var(--accent-glow); \}\
+        .blog-article p \{ color: var(--text-sec); margin-bottom: 20px; font-size: 1rem; \}\
+        .blog-article strong \{ color: var(--text); \}\
+        .blog-article ul, .blog-article ol \{ color: var(--text-sec); margin-bottom: 20px; padding-left: 24px; \}\
+        .blog-article li \{ margin-bottom: 8px; \}\
+\
+        .blog-callout \{\
+            background: var(--accent-light); border-left: 3px solid var(--accent);\
+            padding: 20px 24px; border-radius: 0 12px 12px 0;\
+            margin: 32px 0; font-size: 0.95rem; color: var(--text-sec);\
+        \}\
+        .blog-callout strong \{ color: var(--accent-glow); \}\
+\
+        .blog-cta-box \{\
+            background: var(--bg-card); border: 1px solid var(--border-accent);\
+            border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0;\
+        \}\
+        .blog-cta-box h3 \{ font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 12px; color: var(--text); \}\
+        .blog-cta-box p \{ color: var(--text-sec); margin-bottom: 20px; font-size: 0.9rem; \}\
+        .blog-cta-btn \{\
+            display: inline-block; padding: 12px 28px; background: var(--accent);\
+            color: white; border-radius: 9999px; font-weight: 600; font-size: 0.9rem;\
+            transition: 0.3s;\
+        \}\
+        .blog-cta-btn:hover \{ background: var(--accent-glow); text-decoration: none; transform: translateY(-2px); \}\
+\
+        /* FOOTER */\
+        .blog-footer \{ border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 0.8rem; color: var(--text-muted); \}\
+\
+        @media (max-width: 768px) \{\
+            .blog-article \{ padding: 100px 16px 60px; \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <nav class="blog-nav">\
+        <a href="/" class="blog-nav-logo"><span>V</span> Vixel</a>\
+        <a href="/#blog" class="blog-nav-back">\uc0\u8592  Back to Blog</a>\
+    </nav>\
+\
+    <article class="blog-article">\
+        <span class="blog-article-tag">Website Basics</span>\
+        <h1>How a Website is Actually Made: The Complete Beginner's Guide</h1>\
+        <div class="blog-article-meta">\
+            <span>By Vixel Team</span>\
+            <span>|</span>\
+            <span>5 min read</span>\
+            <span>|</span>\
+            <span>March 2026</span>\
+        </div>\
+\
+        <p>If you are a business owner thinking about getting a website, you have probably wondered how the whole thing actually works. What goes on behind the scenes? What is a domain? What is hosting? And why do some websites cost \uc0\u8377 5,000 while others cost \u8377 5,00,000?</p>\
+\
+        <p>This guide breaks down the entire website creation process in simple, everyday language. No technical jargon. No confusing terms. Just a clear, honest explanation of how modern websites are built.</p>\
+\
+        <h2>Step 1: Getting a Domain Name</h2>\
+\
+        <p>Your domain name is your website's address on the internet. It is what people type into their browser to find you. For example, <strong>vixel.in</strong> is our domain name.</p>\
+\
+        <p>Think of it like a shop's signboard. Without it, nobody knows where to find you. Here is what you need to know about domains:</p>\
+\
+        <ul>\
+            <li><strong>.com</strong> is the most popular and globally recognized extension</li>\
+            <li><strong>.in</strong> is perfect for Indian businesses targeting local customers</li>\
+            <li>A domain typically costs <strong>\uc0\u8377 500 to \u8377 800 per year</strong></li>\
+            <li>You can buy domains from sites like Namecheap, GoDaddy, or Hostinger</li>\
+            <li>Keep it short, easy to spell, and easy to remember</li>\
+        </ul>\
+\
+        <div class="blog-callout">\
+            <strong>Pro tip:</strong> Always buy the domain yourself so you own it. Never let a developer buy it under their account. The domain is YOUR property.\
+        </div>\
+\
+        <h2>Step 2: Setting Up Hosting</h2>\
+\
+        <p>If the domain name is your signboard, <strong>hosting is the actual shop space</strong>. It is where all your website files (images, text, code) are stored on a computer (called a server) that stays connected to the internet 24/7.</p>\
+\
+        <p>When someone types your domain name, the internet takes them to your hosting server and shows them your website. Without hosting, your domain points to nothing.</p>\
+\
+        <h3>Types of hosting</h3>\
+        <ul>\
+            <li><strong>Shared hosting</strong> (\uc0\u8377 100 to \u8377 300/month): Your website shares server space with other websites. Affordable and perfect for small businesses.</li>\
+            <li><strong>VPS hosting</strong> (\uc0\u8377 800 to \u8377 2,000/month): Your own dedicated portion of a server. Better performance for growing businesses.</li>\
+            <li><strong>Free hosting</strong> (Vercel, Netlify): For static websites built with custom code. Fast and completely free. This is what many modern agencies use.</li>\
+        </ul>\
+\
+        <h2>Step 3: Designing the Website</h2>\
+\
+        <p>Design is what your website looks like. Colors, fonts, layout, images, spacing. Everything visual. Good design is not about making things pretty. <strong>Good design is about making things work.</strong></p>\
+\
+        <p>A well-designed website should:</p>\
+\
+        <ul>\
+            <li>Load in under 3 seconds (or visitors leave)</li>\
+            <li>Look great on mobile phones (70% of visitors use phones)</li>\
+            <li>Make it obvious what your business does within 5 seconds</li>\
+            <li>Have clear buttons that tell visitors what to do next (call, book, buy)</li>\
+            <li>Use colors that match your brand and build trust</li>\
+        </ul>\
+\
+        <p>Most agencies start by creating a <strong>wireframe</strong>, which is a rough sketch of where everything will go on the page. Then they create a detailed design mockup before writing any code.</p>\
+\
+        <h2>Step 4: Building (Development)</h2>\
+\
+        <p>This is where the design becomes a real, working website. A developer writes code that turns the visual design into something that works in a browser. There are two main approaches:</p>\
+\
+        <h3>Template-based development</h3>\
+        <p>Using platforms like WordPress, Wix, or Framer to build the website using pre-made templates. This is faster and cheaper, but less customizable. Good for most small businesses.</p>\
+\
+        <h3>Custom code development</h3>\
+        <p>Writing the website from scratch using HTML, CSS, and JavaScript. This gives you complete control over every pixel. The website is unique, faster, and fully yours. It costs more but delivers better results for businesses that want to stand out.</p>\
+\
+        <div class="blog-callout">\
+            <strong>At Vixel</strong>, we use custom code for our Professional and Growth packages because it gives our clients faster websites, better SEO performance, and designs that are truly one-of-a-kind.\
+        </div>\
+\
+        <h2>Step 5: Adding Content</h2>\
+\
+        <p>Content is everything on your website: text, images, videos, testimonials, pricing, and contact information. Content is what actually convinces visitors to become customers.</p>\
+\
+        <p>Great website content should:</p>\
+\
+        <ul>\
+            <li>Speak directly to your customer's problems and needs</li>\
+            <li>Be written in simple, clear language (not corporate jargon)</li>\
+            <li>Include real photos of your business, team, and work</li>\
+            <li>Have clear calls to action ("Book Now", "WhatsApp Us", "Get a Quote")</li>\
+            <li>Be optimized with keywords that people actually search for on Google</li>\
+        </ul>\
+\
+        <h2>Step 6: SEO Setup</h2>\
+\
+        <p>SEO stands for Search Engine Optimization. It is the process of making your website show up on Google when people search for your service.</p>\
+\
+        <p>Without SEO, your beautiful website is like a shop in a hidden alley with no signboard. Nobody can find it. Basic SEO setup includes:</p>\
+\
+        <ul>\
+            <li><strong>Page titles and meta descriptions</strong> that include your target keywords</li>\
+            <li><strong>Header tags</strong> (H1, H2, H3) organized properly</li>\
+            <li><strong>Image alt text</strong> describing every image for Google</li>\
+            <li><strong>Fast loading speed</strong> because Google penalizes slow sites</li>\
+            <li><strong>Mobile-friendly design</strong> because Google uses mobile-first indexing</li>\
+            <li><strong>Google Business Profile</strong> connected to your website</li>\
+            <li><strong>Google Search Console</strong> and <strong>Analytics</strong> installed for tracking</li>\
+        </ul>\
+\
+        <h2>Step 7: Testing and Launch</h2>\
+\
+        <p>Before going live, every website should be tested for:</p>\
+\
+        <ul>\
+            <li>Speed (loads in under 3 seconds on mobile)</li>\
+            <li>Mobile responsiveness (looks good on every screen size)</li>\
+            <li>Broken links (every link and button works)</li>\
+            <li>Contact forms (actually send messages to your email or WhatsApp)</li>\
+            <li>Browser compatibility (works on Chrome, Safari, Firefox)</li>\
+            <li>SEO checklist (all meta tags, schema markup, sitemap in place)</li>\
+        </ul>\
+\
+        <p>Once everything checks out, the website goes live. Your domain is connected to your hosting, and within a few hours, anyone in the world can find your business online.</p>\
+\
+        <h2>How Long Does All This Take?</h2>\
+\
+        <p>For a professional agency like Vixel, the entire process from discovery call to live website takes <strong>5 to 7 business days</strong>. Here is the typical timeline:</p>\
+\
+        <ul>\
+            <li><strong>Day 1:</strong> Discovery call and requirements gathering</li>\
+            <li><strong>Day 2 to 3:</strong> Design and first draft</li>\
+            <li><strong>Day 4:</strong> Your review and feedback</li>\
+            <li><strong>Day 5 to 6:</strong> Revisions and final development</li>\
+            <li><strong>Day 7:</strong> Testing, SEO setup, and launch</li>\
+        </ul>\
+\
+        <h2>How Much Does It Cost?</h2>\
+\
+        <p>Website costs vary wildly in India. Here is an honest breakdown:</p>\
+\
+        <ul>\
+            <li><strong>DIY (Wix/WordPress):</strong> \uc0\u8377 0 to \u8377 5,000 (but you spend 20+ hours and it usually looks amateur)</li>\
+            <li><strong>Freelancer:</strong> \uc0\u8377 5,000 to \u8377 20,000 (quality varies enormously)</li>\
+            <li><strong>Professional agency:</strong> \uc0\u8377 10,000 to \u8377 50,000 (reliable quality, SEO included, ongoing support)</li>\
+            <li><strong>Enterprise agency:</strong> \uc0\u8377 1,00,000+ (for large companies with complex needs)</li>\
+        </ul>\
+\
+        <div class="blog-callout">\
+            <strong>The right question is not "how much does a website cost?" but "how much is it costing me NOT to have a good website?"</strong> Every day without a proper online presence, your competitors are capturing customers that should have been yours.\
+        </div>\
+\
+        <div class="blog-cta-box">\
+            <h3>Want a website that actually brings you customers?</h3>\
+            <p>We build stunning, SEO-optimized websites for businesses across India. Starting at just \uc0\u8377 9,999.</p>\
+            <a href="https://vixel.in/#contact" class="blog-cta-btn">Get Your Free Audit \uc0\u8594 </a>\
+        </div>\
+    </article>\
+\
+    <footer class="blog-footer">&copy; 2026 Vixel. All rights reserved. | <a href="/">Home</a> | <a href="/#blog">Blog</a></footer>\
+</body>\
+</html>}
