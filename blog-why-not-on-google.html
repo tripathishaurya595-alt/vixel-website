@@ -32,41 +32,188 @@
     }
     </script>
 
+    <!-- FIX: Added missing preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Same styles as Blog 1, copy the <style> block from above -->
+
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --bg: #0a0a0a; --bg-card: #161616; --accent: #6C5CE7; --accent-glow: #a78bfa; --accent-light: rgba(108, 92, 231, 0.1); --text: #ffffff; --text-sec: #94a3b8; --text-muted: #64748b; --border: rgba(255,255,255,0.06); --border-accent: rgba(108,92,231,0.3); --font: 'Inter', sans-serif; --font-display: 'Space Grotesk', sans-serif; }
-        html { scroll-behavior: smooth; } body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.8; } a { color: var(--accent-glow); text-decoration: none; } a:hover { text-decoration: underline; }
-        .blog-nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; background: rgba(10,10,10,0.4); backdrop-filter: blur(24px); border: 1px solid var(--border); border-radius: 9999px; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; width: calc(100% - 40px); max-width: 800px; }
-        .blog-nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; color: var(--text); } .blog-nav-logo span { width: 28px; height: 28px; background: linear-gradient(135deg, var(--accent), var(--accent-glow)); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; }
-        .blog-nav-back { font-size: 0.85rem; color: var(--text-sec); padding: 6px 16px; border: 1px solid var(--border); border-radius: 9999px; transition: 0.3s; } .blog-nav-back:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
-        .blog-article { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; } .blog-article-tag { display: inline-block; padding: 4px 12px; background: var(--accent-light); color: var(--accent-glow); border-radius: 9999px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
-        .blog-article h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.02em; } .blog-article-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; display: flex; align-items: center; gap: 16px; }
-        .blog-article h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin: 48px 0 16px; } .blog-article h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 32px 0 12px; color: var(--accent-glow); }
-        .blog-article p { color: var(--text-sec); margin-bottom: 20px; font-size: 1rem; } .blog-article strong { color: var(--text); } .blog-article ul, .blog-article ol { color: var(--text-sec); margin-bottom: 20px; padding-left: 24px; } .blog-article li { margin-bottom: 8px; }
-        .blog-callout { background: var(--accent-light); border-left: 3px solid var(--accent); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; font-size: 0.95rem; color: var(--text-sec); } .blog-callout strong { color: var(--accent-glow); }
-        .blog-cta-box { background: var(--bg-card); border: 1px solid var(--border-accent); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; } .blog-cta-box h3 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 12px; } .blog-cta-box p { color: var(--text-sec); margin-bottom: 20px; font-size: 0.9rem; }
-        .blog-cta-btn { display: inline-block; padding: 12px 28px; background: var(--accent); color: white; border-radius: 9999px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; } .blog-cta-btn:hover { background: var(--accent-glow); text-decoration: none; }
-        .blog-footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 0.8rem; color: var(--text-muted); }
-        @media (max-width: 768px) { .blog-article { padding: 100px 16px 60px; } }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-card: #161616;
+            --accent: #6C5CE7;
+            --accent-glow: #a78bfa;
+            --accent-light: rgba(108, 92, 231, 0.1);
+            --text: #ffffff;
+            --text-sec: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(255,255,255,0.06);
+            --border-accent: rgba(108,92,231,0.3);
+            --font: 'Inter', sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden; }
+        a { color: var(--accent-glow); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* SCROLL PROGRESS */
+        .scroll-progress {
+            position: fixed; top: 0; left: 0; width: 0%; height: 3px;
+            background: linear-gradient(90deg, var(--accent), #10b981);
+            z-index: 10000; transition: width 0.1s linear;
+        }
+
+        /* NAV */
+        .blog-nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(10,10,10,0.4);
+            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--border);
+            border-radius: 9999px; padding: 12px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+            width: calc(100% - 40px); max-width: 800px;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        .blog-nav.scrolled {
+            background: rgba(10,10,10,0.85);
+            border-color: rgba(108,92,231,0.2);
+        }
+        .blog-nav-logo {
+            font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;
+            display: flex; align-items: center; gap: 8px;
+            color: var(--text); cursor: pointer;
+        }
+        .blog-nav-logo span {
+            width: 28px; height: 28px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; font-weight: 800;
+        }
+        .blog-nav-back {
+            font-size: 0.85rem; color: var(--text-sec);
+            padding: 6px 16px;
+            border: 1px solid var(--border); border-radius: 9999px;
+            transition: border-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        .blog-nav-back:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
+
+        /* ARTICLE */
+        .blog-article { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+
+        .blog-article-tag {
+            display: inline-block; padding: 4px 12px;
+            background: var(--accent-light); color: var(--accent-glow);
+            border-radius: 9999px; font-size: 0.72rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;
+        }
+
+        .blog-article h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700; line-height: 1.2;
+            margin-bottom: 16px; letter-spacing: -0.02em;
+        }
+
+        .blog-article-meta {
+            font-size: 0.85rem; color: var(--text-muted);
+            margin-bottom: 32px;
+            display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+        }
+
+        /* HERO IMAGE */
+        .blog-hero-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+        .blog-hero-image img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+        }
+
+        .blog-article h2 {
+            font-family: var(--font-display); font-size: 1.5rem; font-weight: 600;
+            margin: 48px 0 16px; color: var(--text);
+        }
+        .blog-article h3 {
+            font-family: var(--font-display); font-size: 1.15rem; font-weight: 600;
+            margin: 32px 0 12px; color: var(--accent-glow);
+        }
+        .blog-article p { color: var(--text-sec); margin-bottom: 20px; font-size: 1rem; }
+        .blog-article strong { color: var(--text); }
+        .blog-article ul, .blog-article ol { color: var(--text-sec); margin-bottom: 20px; padding-left: 24px; }
+        .blog-article li { margin-bottom: 8px; }
+
+        .blog-callout {
+            background: var(--accent-light); border-left: 3px solid var(--accent);
+            padding: 20px 24px; border-radius: 0 12px 12px 0;
+            margin: 32px 0; font-size: 0.95rem; color: var(--text-sec);
+        }
+        .blog-callout strong { color: var(--accent-glow); }
+
+        .blog-cta-box {
+            background: var(--bg-card); border: 1px solid var(--border-accent);
+            border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0;
+        }
+        .blog-cta-box h3 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 12px; color: var(--text); }
+        .blog-cta-box p { color: var(--text-sec); margin-bottom: 20px; font-size: 0.9rem; }
+        .blog-cta-btn {
+            display: inline-block; padding: 12px 28px;
+            background: var(--accent); color: white;
+            border-radius: 9999px; font-weight: 600; font-size: 0.9rem;
+            transition: background 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .blog-cta-btn:hover { background: var(--accent-glow); text-decoration: none; transform: translateY(-2px); }
+
+        /* FOOTER */
+        .blog-footer {
+            border-top: 1px solid var(--border); padding: 32px 24px;
+            text-align: center; font-size: 0.8rem; color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .blog-article { padding: 100px 16px 60px; }
+            .blog-article-meta { gap: 10px; }
+        }
     </style>
 </head>
 <body>
-    <nav class="blog-nav">
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="blog-nav" id="blogNav">
         <a href="/" class="blog-nav-logo"><span>V</span> Vixel</a>
-        <a href="/#blog" class="blog-nav-back">uc0u8592  Back to Blog</a>
+        <a href="/#blog" class="blog-nav-back">← Back to Blog</a>
     </nav>
 
     <article class="blog-article">
         <span class="blog-article-tag">SEO</span>
         <h1>Why Your Business Does Not Show Up on Google (and How to Fix It)</h1>
         <div class="blog-article-meta">
-            <span>By Vixel Team</span><span>|</span><span>4 min read</span><span>|</span><span>March 2026</span>
+            <span>By Vixel Team</span>
+            <span>|</span>
+            <span>4 min read</span>
+            <span>|</span>
+            <span>March 2026</span>
         </div>
-<div class="blog-image" style="padding:0;">
-    <img src="assests/blog-why-not-on-google.jpg" alt="Why your business does not show up on Google - illustration showing SEO problems" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-</div>
+
+        <!-- HERO IMAGE -->
+        <div class="blog-hero-image">
+            <img src="assests/blog-why-not-on-google.jpg" alt="Why your business does not show up on Google - illustration showing SEO problems" loading="lazy">
+        </div>
+
         <p>You run a great business. Your customers love you. But when someone searches for your service on Google, you are nowhere to be found. Meanwhile, your competitor, who honestly does worse work than you, shows up right at the top.</p>
 
         <p>Frustrating, right? The truth is, <strong>Google does not rank the best business. Google ranks the most visible business.</strong> And visibility comes from doing a few specific things correctly online.</p>
@@ -80,7 +227,7 @@
         <p>A Facebook page or Instagram profile is not a substitute. Google does not rank social media profiles as highly as proper websites for local business searches. When someone searches "dentist near me" or "coaching institute in Jaipur," Google wants to show them a <strong>dedicated website</strong> with detailed information about services, location, contact details, and reviews.</p>
 
         <h3>How to fix it</h3>
-        <p>Get a professional website. Even a simple 3 to 5 page website with your services, contact information, and Google Maps integration is enough to start showing up on Google. At Vixel, our Starter package does exactly this for uc0u8377 9,999.</p>
+        <p>Get a professional website. Even a simple 3 to 5 page website with your services, contact information, and Google Maps integration is enough to start showing up on Google. At Vixel, our Starter package does exactly this for ₹9,999.</p>
 
         <h2>Reason 2: Your Website is Not Optimized for Search (No SEO)</h2>
 
@@ -161,10 +308,22 @@
         <div class="blog-cta-box">
             <h3>Not sure where your business stands on Google?</h3>
             <p>We will audit your online presence for free and show you exactly what needs to be fixed. No strings attached.</p>
-            <a href="https://vixel.in/#contact" class="blog-cta-btn">Get Your Free Audit uc0u8594 </a>
+            <a href="https://vixel.in/#contact" class="blog-cta-btn">Get Your Free Audit →</a>
         </div>
     </article>
 
-    <footer class="blog-footer">&copy; 2026 Vixel. All rights reserved. | <a href="/">Home</a> | <a href="/#blog">Blog</a></footer>
+    <footer class="blog-footer">
+        &copy; 2026 Vixel. All rights reserved. | <a href="/">Home</a> | <a href="/#blog">Blog</a>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('scrollProgress').style.width = progress + '%';
+            document.getElementById('blogNav').classList.toggle('scrolled', scrollTop > 50);
+        }, { passive: true });
+    </script>
 </body>
-</html>}
+</html>
