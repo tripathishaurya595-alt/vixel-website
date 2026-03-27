@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vixel builds high-converting, SEO-optimized websites for businesses across India. Get more customers from Google with a stunning website that works 24/7. Professional web design starting at Rs 9,999.">
-    <meta name="keywords" content="website design India, web development agency, SEO website design, small business website, affordable website India, professional website design, business website India, website developer near me, best web design agency India, custom website development">
+    <meta name="description"
+        content="Vixel builds high-converting, SEO-optimized websites for businesses across India. Get more customers from Google with a stunning website that works 24/7. Professional web design starting at Rs 9,999.">
+    <meta name="keywords"
+        content="website design India, web development agency, SEO website design, small business website, affordable website India, professional website design, business website India, website developer near me, best web design agency India, custom website development">
     <meta name="author" content="Vixel">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#6C5CE7">
     <link rel="canonical" href="https://vixel.in">
 
     <meta property="og:title" content="Vixel | Websites That Actually Bring You Customers">
-    <meta property="og:description" content="We build stunning, SEO-optimized websites for businesses across India. More visibility. More leads. More growth.">
+    <meta property="og:description"
+        content="We build stunning, SEO-optimized websites for businesses across India. More visibility. More leads. More growth.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vixel.in">
-    <meta property="og:image" content="https://vixel.in/assets/vixel-logo.png">
+    <meta property="og:image" content="https://vixel.in/assests/vixel-logo.png">
     <meta property="og:site_name" content="Vixel">
     <meta property="og:locale" content="en_IN">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vixel | Websites That Actually Bring You Customers">
-    <meta name="twitter:description" content="We build stunning, SEO-optimized websites for businesses across India.">
+    <meta name="twitter:description"
+        content="We build stunning, SEO-optimized websites for businesses across India.">
 
     <title>Vixel | Websites That Actually Bring You Customers</title>
 
@@ -31,7 +36,7 @@
         "name": "Vixel",
         "description": "Web design and development agency specializing in SEO-optimized websites for businesses across India.",
         "url": "https://vixel.in",
-        "logo": "https://vixel.in/assets/vixel-logo.png",
+        "logo": "https://vixel.in/assests/vixel-logo.png",
         "areaServed": {"@type": "Country", "name": "India"},
         "serviceType": ["Web Design", "Web Development", "SEO", "Google Business Setup"],
         "priceRange": "Rs 9999 - Rs 37999",
@@ -54,10 +59,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --bg-primary: #0a0a0a;
@@ -83,401 +96,1866 @@
             --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
-        body { font-family: var(--font-primary); background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; cursor: none; }
-        ::selection { background: var(--accent); color: white; }
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
         /* ===== CUSTOM CURSOR ===== */
         .cursor-dot {
-            width: 10px; height: 10px; background: var(--accent);
-            border-radius: 50%; position: fixed; top: 0; left: 0;
-            pointer-events: none; z-index: 99999;
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999;
             transform: translate(-50%, -50%);
             transition: width 0.3s, height 0.3s, background 0.3s;
         }
+
         .cursor-ring {
-            width: 44px; height: 44px;
+            width: 44px;
+            height: 44px;
             border: 2.5px solid var(--accent);
             border-radius: 50%;
-            position: fixed; top: 0; left: 0;
-            pointer-events: none; z-index: 99998;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99998;
             transform: translate(-50%, -50%);
             border-top-color: var(--accent);
             border-right-color: transparent;
             border-bottom-color: var(--accent);
             border-left-color: transparent;
             transition: width 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
-                        height 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
-                        border-color 0.3s;
+                height 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+                border-color 0.3s;
             animation: cursorSpin 6s linear infinite;
         }
+
         @keyframes cursorSpin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
-        .cursor-hover .cursor-dot { width: 14px; height: 14px; background: var(--cta-green); }
+
+        .cursor-hover .cursor-dot {
+            width: 14px;
+            height: 14px;
+            background: var(--cta-green);
+        }
+
         .cursor-hover .cursor-ring {
-            width: 56px; height: 56px;
+            width: 56px;
+            height: 56px;
             border-top-color: var(--cta-green);
             border-bottom-color: var(--cta-green);
             border-right-color: transparent;
             border-left-color: transparent;
             animation-duration: 3s;
         }
+
         @media (hover: none) and (pointer: coarse) {
-            .cursor-dot, .cursor-ring { display: none; }
-            body { cursor: auto; }
+
+            .cursor-dot,
+            .cursor-ring {
+                display: none;
+            }
+
+            body {
+                cursor: auto;
+            }
         }
 
         /* ===== NAVBAR ===== */
         .navbar {
-            position: fixed; top: 20px; left: 50%;
-            transform: translateX(-50%); z-index: 1000;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
             background: rgba(20, 16, 40, 0.25);
             backdrop-filter: blur(30px) saturate(1.4);
             -webkit-backdrop-filter: blur(30px) saturate(1.4);
             border: 1px solid rgba(108, 92, 231, 0.08);
             border-radius: var(--radius-full);
             padding: 16px 24px;
-            display: flex; align-items: center; justify-content: space-between;
-            width: calc(100% - 40px); max-width: 960px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 40px);
+            max-width: 960px;
             transition: var(--transition-smooth);
-            box-shadow: 0 4px 24px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.03);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.03);
         }
+
         .navbar.scrolled {
             background: rgba(14, 12, 28, 0.65);
             border-color: rgba(108, 92, 231, 0.12);
-            box-shadow: 0 8px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.04);
             padding: 14px 24px;
         }
+
         .nav-logo {
-            font-family: var(--font-display); font-weight: 700; font-size: 1.25rem;
-            color: var(--text-primary); display: flex; align-items: center; gap: 10px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .nav-logo img { height: 30px; width: auto; }
-        .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+
+        .nav-logo img {
+            height: 30px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            list-style: none;
+        }
+
         .nav-links a {
-            padding: 8px 14px; border-radius: var(--radius-full);
-            font-size: 0.84rem; font-weight: 500;
-            color: rgba(255,255,255,0.7); transition: var(--transition-fast);
+            padding: 8px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.84rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition-fast);
         }
-        .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.06); }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
         .nav-cta {
             background: var(--accent) !important;
             color: var(--text-primary) !important;
-            font-weight: 600 !important; padding: 10px 20px !important;
+            font-weight: 600 !important;
+            padding: 10px 20px !important;
         }
-        .nav-cta:hover { background: var(--accent-glow) !important; transform: scale(1.05); }
+
+        .nav-cta:hover {
+            background: var(--accent-glow) !important;
+            transform: scale(1.05);
+        }
 
         .hamburger {
-            display: none; flex-direction: column; gap: 5px;
-            cursor: pointer; padding: 8px; z-index: 1001;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
         }
-        .hamburger span { width: 24px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: var(--transition-fast); }
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: var(--transition-fast);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
 
         .mobile-menu {
-            display: none; position: fixed; top: 0; left: 0;
-            width: 100%; height: 100vh;
-            background: rgba(10,10,10,0.97); backdrop-filter: blur(30px);
-            z-index: 999; flex-direction: column; align-items: center;
-            justify-content: center; gap: 24px; opacity: 0; transition: opacity 0.3s;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.97);
+            backdrop-filter: blur(30px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
         }
-        .mobile-menu.active { display: flex; opacity: 1; }
-        .mobile-menu a { font-size: 1.5rem; font-weight: 600; color: var(--text-secondary); transition: var(--transition-fast); font-family: var(--font-display); }
-        .mobile-menu a:hover { color: var(--accent); }
+
+        .mobile-menu.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: var(--transition-fast);
+            font-family: var(--font-display);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--accent);
+        }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .navbar { padding: 14px 20px; }
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar {
+                padding: 14px 20px;
+            }
         }
 
         /* ===== LAYOUT ===== */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        .section { padding: 120px 0; position: relative; }
-        @media (max-width: 768px) { .section { padding: 80px 0; } }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 80px 0;
+            }
+        }
 
         /* ===== SCROLL ANIMATIONS ===== */
-        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .reveal-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.8s, transform 0.8s; }
-        .reveal-left.active { opacity: 1; transform: translateX(0); }
-        .reveal-right { opacity: 0; transform: translateX(60px); transition: opacity 0.8s, transform 0.8s; }
-        .reveal-right.active { opacity: 1; transform: translateX(0); }
-        .stagger-children .reveal:nth-child(1) { transition-delay: 0s; }
-        .stagger-children .reveal:nth-child(2) { transition-delay: 0.1s; }
-        .stagger-children .reveal:nth-child(3) { transition-delay: 0.15s; }
-        .stagger-children .reveal:nth-child(4) { transition-delay: 0.2s; }
-        .stagger-children .reveal:nth-child(5) { transition-delay: 0.25s; }
-        .stagger-children .reveal:nth-child(6) { transition-delay: 0.3s; }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .stagger-children .reveal:nth-child(1) {
+            transition-delay: 0s;
+        }
+
+        .stagger-children .reveal:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-children .reveal:nth-child(3) {
+            transition-delay: 0.15s;
+        }
+
+        .stagger-children .reveal:nth-child(4) {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-children .reveal:nth-child(5) {
+            transition-delay: 0.25s;
+        }
+
+        .stagger-children .reveal:nth-child(6) {
+            transition-delay: 0.3s;
+        }
 
         /* ===== HERO ===== */
-        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 100px; }
-        .hero-content { position: relative; z-index: 2; max-width: 960px; width: 100%; }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 960px;
+            width: 100%;
+            text-align: center;
+        }
+
         .hero-grid {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(108,92,231,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(108,92,231,0.03) 1px, transparent 1px);
-            background-size: 60px 60px; z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(108, 92, 231, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(108, 92, 231, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 0;
             mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
             -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
         }
+
         .hero-cloud {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 900px; height: 700px; pointer-events: none; z-index: 0; opacity: 0.35; filter: blur(80px);
-            background: radial-gradient(ellipse at 40% 40%, rgba(108,92,231,0.5) 0%, transparent 50%),
-                        radial-gradient(ellipse at 65% 55%, rgba(139,92,246,0.35) 0%, transparent 45%),
-                        radial-gradient(ellipse at 30% 70%, rgba(167,139,250,0.25) 0%, transparent 40%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 700px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.35;
+            filter: blur(80px);
+            background: radial-gradient(ellipse at 40% 40%, rgba(108, 92, 231, 0.5) 0%, transparent 50%),
+                radial-gradient(ellipse at 65% 55%, rgba(139, 92, 246, 0.35) 0%, transparent 45%),
+                radial-gradient(ellipse at 30% 70%, rgba(167, 139, 250, 0.25) 0%, transparent 40%);
             animation: cloudDrift 15s ease-in-out infinite;
         }
+
         .hero-cloud-2 {
-            position: absolute; top: 40%; right: -10%; width: 600px; height: 500px;
-            pointer-events: none; z-index: 0; opacity: 0.2; filter: blur(100px);
-            background: radial-gradient(ellipse, rgba(108,92,231,0.6), transparent 60%);
+            position: absolute;
+            top: 40%;
+            right: -10%;
+            width: 600px;
+            height: 500px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.2;
+            filter: blur(100px);
+            background: radial-gradient(ellipse, rgba(108, 92, 231, 0.6), transparent 60%);
             animation: cloudDrift2 20s ease-in-out infinite;
         }
-        @keyframes cloudDrift { 0%, 100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-48%,-52%) scale(1.05); } }
-        @keyframes cloudDrift2 { 0%, 100% { transform: translate(0,0) scale(1); opacity: 0.2; } 50% { transform: translate(-20px,15px) scale(1.1); opacity: 0.3; } }
 
-        .float-object { position: absolute; border-radius: 50%; pointer-events: none; opacity: 0.12; filter: blur(1px); }
-        .float-1 { width: 300px; height: 300px; background: radial-gradient(circle, var(--accent), transparent 70%); top: 10%; right: -5%; animation: floatMove1 12s ease-in-out infinite; }
-        .float-2 { width: 200px; height: 200px; background: radial-gradient(circle, var(--accent-glow), transparent 70%); bottom: 20%; left: -3%; animation: floatMove2 15s ease-in-out infinite; }
-        @keyframes floatMove1 { 0%, 100% { transform: translate(0,0); } 50% { transform: translate(20px,-30px); } }
-        @keyframes floatMove2 { 0%, 100% { transform: translate(0,0); } 50% { transform: translate(25px,-20px); } }
+        @keyframes cloudDrift {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-48%, -52%) scale(1.05);
+            }
+        }
+
+        @keyframes cloudDrift2 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.2;
+            }
+
+            50% {
+                transform: translate(-20px, 15px) scale(1.1);
+                opacity: 0.3;
+            }
+        }
+
+        .float-object {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.12;
+            filter: blur(1px);
+        }
+
+        .float-1 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent), transparent 70%);
+            top: 10%;
+            right: -5%;
+            animation: floatMove1 12s ease-in-out infinite;
+        }
+
+        .float-2 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+            bottom: 20%;
+            left: -3%;
+            animation: floatMove2 15s ease-in-out infinite;
+        }
+
+        @keyframes floatMove1 {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(20px, -30px);
+            }
+        }
+
+        @keyframes floatMove2 {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(25px, -20px);
+            }
+        }
 
         .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px;
-            background: var(--accent-light); border: 1px solid var(--border-accent);
-            border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 500;
-            color: var(--accent-glow); margin-bottom: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: var(--accent-light);
+            border: 1px solid var(--border-accent);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent-glow);
+            margin-bottom: 24px;
         }
-        .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--cta-green); border-radius: 50%; animation: dotPulse 2s ease-in-out infinite; }
-        @keyframes dotPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-        .hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem,6vw,4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em; }
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--cta-green);
+            border-radius: 50%;
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+        }
+
         .gradient-text {
             background: linear-gradient(135deg, var(--accent), var(--accent-glow), var(--cta-green));
-            background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; animation: gradientShift 5s ease-in-out infinite;
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 5s ease-in-out infinite;
         }
-        @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 
-        .hero-description { font-size: 1.15rem; color: var(--text-secondary); max-width: 640px; margin-bottom: 36px; line-height: 1.7; }
-        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         .btn-primary {
-            padding: 14px 32px; background: var(--accent); color: white;
-            border-radius: var(--radius-full); font-weight: 600; font-size: 0.95rem;
-            border: none; cursor: pointer; transition: var(--transition-smooth);
-            display: inline-flex; align-items: center; gap: 8px; position: relative; overflow: hidden;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
         }
-        .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.5s; }
-        .btn-primary:hover::before { left: 100%; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(108,92,231,0.4); }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 92, 231, 0.4);
+        }
 
         .btn-secondary {
-            padding: 14px 32px; background: transparent; color: var(--text-primary);
-            border-radius: var(--radius-full); font-weight: 600; font-size: 0.95rem;
-            border: 1px solid var(--border-subtle); cursor: pointer; transition: var(--transition-smooth);
-            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px;
+            background: transparent;
+            color: var(--text-primary);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-subtle);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        .btn-secondary:hover { border-color: var(--accent); background: var(--accent-light); transform: translateY(-2px); }
 
-        .hero-stats { display: flex; gap: 48px; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border-subtle); }
-        .stat-item h3 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--accent-glow); }
-        .stat-item p { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
-        @media (max-width: 768px) { .hero-stats { gap: 24px; flex-wrap: wrap; } .hero-buttons { flex-direction: column; align-items: flex-start; } }
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-subtle);
+            justify-content: center;
+        }
+
+        .stat-item h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-glow);
+        }
+
+        .stat-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
 
         /* ===== SECTION LABELS ===== */
-        .section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
-        .section-label::before { content: ''; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
-        .section-title { font-family: var(--font-display); font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.02em; }
-        .section-subtitle { font-size: 1.05rem; color: var(--text-secondary); max-width: 600px; line-height: 1.7; }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+        }
 
         /* ===== MARQUEE ===== */
-        .marquee-section { padding: 32px 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); overflow: hidden; }
-        .marquee-track { display: flex; gap: 64px; animation: marqueeScroll 20s linear infinite; width: max-content; }
-        .marquee-item { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--text-muted); white-space: nowrap; display: flex; align-items: center; gap: 16px; opacity: 0.4; }
-        .marquee-item .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
-        @keyframes marqueeScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-section {
+            padding: 32px 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            overflow: hidden;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 64px;
+            animation: marqueeScroll 20s linear infinite;
+            width: max-content;
+        }
+
+        .marquee-item {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            opacity: 0.4;
+        }
+
+        .marquee-item .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 
         /* ===== PROBLEMS ===== */
-        .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-        .problem-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; transition: var(--transition-smooth); position: relative; overflow: hidden; }
-        .problem-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-glow)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
-        .problem-card:hover::before { transform: scaleX(1); }
-        .problem-card:hover { border-color: var(--border-accent); transform: translateY(-4px); }
-        .problem-icon { width: 48px; height: 48px; background: var(--accent-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-        .problem-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
-        .problem-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
-        .icon-line-lg { width: 48px; height: 48px; stroke: var(--accent-glow); stroke-width: 1.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-        .icon-line { width: 28px; height: 28px; stroke: var(--accent-glow); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-        @media (max-width: 768px) { .problems-grid { grid-template-columns: 1fr; } }
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .problem-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-glow));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .problem-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .problem-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-light);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .problem-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .problem-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .icon-line-lg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--accent-glow);
+            stroke-width: 1.2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .icon-line {
+            width: 28px;
+            height: 28px;
+            stroke: var(--accent-glow);
+            stroke-width: 1.5;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @media (max-width: 768px) {
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /* ===== SERVICES ===== */
-        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
-        .service-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 36px; transition: var(--transition-smooth); position: relative; overflow: hidden; }
-        .service-card:hover { border-color: var(--border-accent); transform: translateY(-4px); background: var(--bg-card-hover); }
-        .service-number { font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: rgba(108,92,231,0.1); position: absolute; top: 16px; right: 24px; line-height: 1; }
-        .service-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .service-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
-        @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+        }
+
+        .service-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(108, 92, 231, 0.1);
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            line-height: 1;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /* ===== PROCESS ===== */
-        .process-section { background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-        .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; position: relative; }
-        .process-steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 28px); right: calc(12.5% + 28px); height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-glow), var(--cta-green), var(--accent)); z-index: 0; }
-        .step-card { text-align: center; position: relative; z-index: 1; }
-        .step-number { width: 56px; height: 56px; background: var(--bg-surface); border: 2px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--accent-glow); margin: 0 auto 20px; transition: var(--transition-smooth); }
-        .step-card:hover .step-number { background: var(--accent); color: white; transform: scale(1.1); box-shadow: 0 0 30px rgba(108,92,231,0.4); }
-        .step-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
-        .step-card p { font-size: 0.85rem; color: var(--text-secondary); }
-        @media (max-width: 768px) { .process-steps { grid-template-columns: 1fr; gap: 32px; } .process-steps::before { display: none; } }
+        .process-section {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: calc(12.5% + 28px);
+            right: calc(12.5% + 28px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-glow), var(--cta-green), var(--accent));
+            z-index: 0;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--bg-surface);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--accent-glow);
+            margin: 0 auto 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .step-card:hover .step-number {
+            background: var(--accent);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(108, 92, 231, 0.4);
+        }
+
+        .step-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+        }
 
         /* ===== PORTFOLIO ===== */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
-        .portfolio-item { border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-subtle); transition: var(--transition-smooth); cursor: pointer; display: block; }
-        .portfolio-item:hover { border-color: var(--border-accent); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(108,92,231,0.12); }
-        .portfolio-image { width: 100%; aspect-ratio: 16/10; background: linear-gradient(135deg, var(--bg-card), var(--accent-light)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-        .portfolio-image .placeholder-text { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; color: var(--text-muted); opacity: 0.5; }
-        .portfolio-info { padding: 24px; }
-        .portfolio-info h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
-        .portfolio-info p { font-size: 0.85rem; color: var(--text-secondary); }
-        .portfolio-tag { display: inline-block; padding: 4px 12px; background: var(--accent-light); color: var(--accent-glow); border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 500; margin-top: 12px; }
-        @media (max-width: 768px) { .portfolio-grid { grid-template-columns: 1fr; } }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .portfolio-item {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            display: block;
+        }
+
+        .portfolio-item:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(108, 92, 231, 0.12);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, var(--bg-card), var(--accent-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-image .placeholder-text {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        .portfolio-info {
+            padding: 24px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .portfolio-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent-light);
+            color: var(--accent-glow);
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /* ===== TESTIMONIALS ===== */
-        .testimonials-track-wrapper { overflow: hidden; margin-top: 48px; position: relative; }
-        .testimonials-track-wrapper::before, .testimonials-track-wrapper::after { content: ''; position: absolute; top: 0; width: 80px; height: 100%; z-index: 2; pointer-events: none; }
-        .testimonials-track-wrapper::before { left: 0; background: linear-gradient(to right, var(--bg-primary), transparent); }
-        .testimonials-track-wrapper::after { right: 0; background: linear-gradient(to left, var(--bg-primary), transparent); }
-        .testimonials-track { display: flex; gap: 24px; animation: scrollTestimonials 30s linear infinite; width: max-content; }
-        .testimonials-track:hover { animation-play-state: paused; }
-        @keyframes scrollTestimonials { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .testimonial-card { min-width: 360px; max-width: 360px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; flex-shrink: 0; transition: var(--transition-smooth); }
-        .testimonial-card:hover { border-color: var(--border-accent); }
-        .testimonial-stars { color: #f59e0b; font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
-        .testimonial-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
-        .testimonial-author { display: flex; align-items: center; gap: 12px; }
-        .testimonial-avatar { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent), var(--accent-glow)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-        .testimonial-author-info h4 { font-size: 0.9rem; font-weight: 600; }
-        .testimonial-author-info p { font-size: 0.75rem; color: var(--text-muted); }
-        .testimonials-nav { display: flex; justify-content: center; gap: 16px; margin-top: 32px; }
-        .testimonial-btn { width: 48px; height: 48px; border: 1px solid var(--border-subtle); border-radius: 50%; background: var(--bg-card); color: var(--text-secondary); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition-fast); }
-        .testimonial-btn:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent-glow); }
-        .testimonial-btn svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-        @media (max-width: 768px) { .testimonial-card { min-width: 300px; max-width: 300px; } }
+        .testimonials-track-wrapper {
+            overflow: hidden;
+            margin-top: 48px;
+            position: relative;
+        }
 
-        /* ===== PRICING ===== */
-        @property --border-angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-        .pricing-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 36px; position: relative; transition: var(--transition-smooth); }
-        .pricing-card:hover { transform: translateY(-6px); border-color: var(--border-accent); }
-        .pricing-card.featured { border-color: transparent; background: linear-gradient(180deg, rgba(108,92,231,0.08), var(--bg-card)); box-shadow: 0 0 60px rgba(108,92,231,0.1); overflow: visible; }
-        .pricing-card.featured::before { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: calc(var(--radius-lg) + 2px); background: conic-gradient(from var(--border-angle, 0deg), transparent 0%, var(--accent) 10%, var(--accent-glow) 20%, transparent 30%, transparent 100%); z-index: -1; animation: rotateBorder 4s linear infinite; }
-        .pricing-card.featured::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: var(--radius-lg); background: linear-gradient(180deg, rgba(108,92,231,0.08), var(--bg-card)); z-index: -1; }
-        @keyframes rotateBorder { 0% { --border-angle: 0deg; } 100% { --border-angle: 360deg; } }
-        .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 4px 16px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; z-index: 1; }
-        .pricing-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; }
-        .pricing-card .price { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--accent-glow); margin-bottom: 4px; }
-        .pricing-card .price-note { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 24px; }
-        .pricing-features { list-style: none; margin-bottom: 32px; }
-        .pricing-features li { padding: 8px 0; font-size: 0.88rem; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 10px; }
-        .pricing-features li::before { content: ''; width: 16px; height: 16px; flex-shrink: 0; margin-top: 3px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; }
-        .pricing-features li.disabled { opacity: 0.4; }
-        .pricing-features li.disabled::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E"); }
-        .pricing-btn { width: 100%; padding: 14px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.9rem; text-align: center; border: none; cursor: pointer; transition: var(--transition-smooth); display: block; }
-        .pricing-btn-primary { background: var(--accent); color: white; }
-        .pricing-btn-primary:hover { background: var(--accent-glow); }
-        .pricing-btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border-subtle); }
-        .pricing-btn-outline:hover { border-color: var(--accent); background: var(--accent-light); }
-        @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
+        .testimonials-track-wrapper::before,
+        .testimonials-track-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 80px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
 
-        /* ===== SEO SECTION ===== */
-        .seo-section { background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-        .seo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-        .seo-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; text-align: center; transition: var(--transition-smooth); }
-        .seo-card:hover { border-color: var(--border-accent); transform: translateY(-4px); }
-        .seo-icon { margin-bottom: 16px; display: flex; justify-content: center; }
-        .seo-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
-        .seo-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
-        @media (max-width: 768px) { .seo-grid { grid-template-columns: 1fr; } }
+        .testimonials-track-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right, var(--bg-primary), transparent);
+        }
 
-        /* ===== BLOG ===== */
-        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-        .blog-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition-smooth); cursor: pointer; display: block; }
-        .blog-card:hover { border-color: var(--border-accent); transform: translateY(-6px); box-shadow: 0 16px 48px rgba(108,92,231,0.08); }
-        .blog-image { width: 100%; aspect-ratio: 16/9; background: var(--bg-card); display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border-subtle); }
-        .blog-image img { width: 100%; height: 100%; object-fit: cover; }
-        .blog-content { padding: 24px; }
-        .blog-tag { display: inline-block; padding: 4px 10px; background: var(--accent-light); color: var(--accent-glow); border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
-        .blog-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
-        .blog-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
-        .blog-meta { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-subtle); font-size: 0.75rem; color: var(--text-muted); }
-        @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+        .testimonials-track-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left, var(--bg-primary), transparent);
+        }
 
-        /* ===== FAQ ===== */
-        .faq-list { max-width: 720px; margin: 48px auto 0; }
-        .faq-item { border: 1px solid var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 12px; overflow: hidden; }
-        .faq-item:hover { border-color: var(--border-accent); }
-        .faq-question { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.95rem; background: var(--bg-card); transition: var(--transition-fast); }
-        .faq-question:hover { background: var(--bg-card-hover); }
-        .faq-icon { font-size: 1.2rem; transition: transform 0.3s; color: var(--accent); }
-        .faq-item.open .faq-icon { transform: rotate(45deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s, padding 0.4s; padding: 0 24px; }
-        .faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 20px; }
-        .faq-answer p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+        .testimonials-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        /* ===== CTA ===== */
-        .cta-section { text-align: center; position: relative; overflow: hidden; }
-        .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(108,92,231,0.12), transparent 60%); transform: translate(-50%,-50%); border-radius: 50%; }
-        .cta-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem,4vw,3rem); font-weight: 800; margin-bottom: 16px; position: relative; }
-        .cta-section p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 36px; position: relative; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+        .testimonials-track.animating {
+            transition: none;
+        }
 
-        /* ===== CONTACT FORM ===== */
-        .contact-form { max-width: 500px; margin: 32px auto 0; display: flex; flex-direction: column; gap: 16px; }
-        .contact-form input, .contact-form select {
-            padding: 14px 20px; background: var(--bg-card); border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-full); color: var(--text-primary);
-            font-family: var(--font-primary); font-size: 0.95rem; outline: none; cursor: text;
+        @keyframes scrollTestimonials {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .testimonial-card {
+            min-width: 360px;
+            max-width: 360px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            flex-shrink: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--border-accent);
+        }
+
+        .testimonial-stars {
+            color: #f59e0b;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-author-info h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .testimonial-author-info p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .testimonials-nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .testimonial-btn {
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
             transition: var(--transition-fast);
         }
-        .contact-form select { cursor: pointer; }
-        .contact-form input:focus, .contact-form select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
-        .contact-form input::placeholder { color: var(--text-muted); }
+
+        .testimonial-btn:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            color: var(--accent-glow);
+        }
+
+        .testimonial-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-card {
+                min-width: 300px;
+                max-width: 300px;
+            }
+        }
+
+        /* ===== PRICING ===== */
+        @property --border-angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-accent);
+        }
+
+        .pricing-card.featured {
+            border-color: transparent;
+            background: linear-gradient(180deg, rgba(108, 92, 231, 0.08), var(--bg-card));
+            box-shadow: 0 0 60px rgba(108, 92, 231, 0.1);
+            overflow: visible;
+        }
+
+        .pricing-card.featured::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: calc(var(--radius-lg) + 2px);
+            background: conic-gradient(from var(--border-angle, 0deg) at 0% 100%,
+                    var(--accent) 0%,
+                    var(--accent-glow) 15%,
+                    var(--cta-green) 30%,
+                    transparent 50%,
+                    transparent 85%,
+                    var(--accent) 100%);
+            z-index: -1;
+            animation: rotateBorderDiag 4s linear infinite;
+        }
+
+        .pricing-card.featured::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(180deg, rgba(108, 92, 231, 0.08), var(--bg-card));
+            z-index: -1;
+        }
+
+        @keyframes rotateBorderDiag {
+            0% {
+                --border-angle: 0deg;
+            }
+
+            100% {
+                --border-angle: 360deg;
+            }
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 4px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card .price {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-glow);
+            margin-bottom: 4px;
+        }
+
+        .pricing-card .price-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-top: 3px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .pricing-features li.disabled {
+            opacity: 0.5;
+        }
+
+        .pricing-features li.disabled::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ef4444' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+        }
+
+        .pricing-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: block;
+        }
+
+        .pricing-btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .pricing-btn-primary:hover {
+            background: var(--accent-glow);
+        }
+
+        .pricing-btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .pricing-btn-outline:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SEO SECTION ===== */
+        .seo-section {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .seo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .seo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .seo-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+        }
+
+        .seo-icon {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .seo-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .seo-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .seo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== BLOG - VERTICAL LAYOUT ===== */
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 48px;
+            max-width: 800px;
+        }
+
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .blog-card:hover {
+            border-color: var(--border-accent);
+            transform: translateX(6px);
+            box-shadow: 0 16px 48px rgba(108, 92, 231, 0.08);
+        }
+
+        .blog-card-accent {
+            width: 4px;
+            min-height: 100%;
+            background: linear-gradient(180deg, var(--accent), var(--accent-glow));
+            flex-shrink: 0;
+            border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+        }
+
+        .blog-content {
+            padding: 24px 28px;
+            flex: 1;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: var(--accent-light);
+            color: var(--accent-glow);
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .blog-read-more {
+            margin-left: auto;
+            color: var(--accent-glow);
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: var(--transition-fast);
+        }
+
+        .blog-card:hover .blog-read-more {
+            gap: 8px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 720px;
+            margin: 48px auto 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-accent);
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background: var(--bg-card);
+            transition: var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            color: var(--accent);
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s, padding 0.4s;
+            padding: 0 24px;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding: 0 24px 20px;
+        }
+
+        .faq-answer p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.12), transparent 60%);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 36px;
+            position: relative;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            max-width: 500px;
+            margin: 32px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-form input,
+        .contact-form select {
+            padding: 14px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-full);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-size: 0.95rem;
+            outline: none;
+            cursor: text;
+            transition: var(--transition-fast);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .contact-form .select-wrapper {
+            position: relative;
+        }
+
+        .contact-form .select-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid var(--text-muted);
+            pointer-events: none;
+        }
+
+        .contact-form .select-wrapper select {
+            width: 100%;
+            padding-right: 45px;
+            cursor: pointer;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-light);
+        }
+
+        .contact-form input::placeholder {
+            color: var(--text-muted);
+        }
 
         /* ===== FOOTER ===== */
-        .footer { padding: 64px 0 32px; border-top: 1px solid var(--border-subtle); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand p { font-size: 0.85rem; color: var(--text-secondary); margin-top: 12px; line-height: 1.7; }
-        .footer-links h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
-        .footer-links a { display: block; font-size: 0.88rem; color: var(--text-secondary); padding: 6px 0; transition: var(--transition-fast); }
-        .footer-links a:hover { color: var(--accent-glow); transform: translateX(4px); }
-        .footer-bottom { padding-top: 24px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); }
-        .footer-social { display: flex; gap: 16px; }
-        .footer-social a { width: 36px; height: 36px; border: 1px solid var(--border-subtle); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: var(--transition-fast); }
-        .footer-social a:hover { border-color: var(--accent); background: var(--accent-light); }
-        .footer-social svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 1.5; fill: none; }
-        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } .footer-bottom { flex-direction: column; gap: 16px; text-align: center; } }
+        .footer {
+            padding: 64px 0 32px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 12px;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        .footer-links a {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-glow);
+            transform: translateX(4px);
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-fast);
+        }
+
+        .footer-social a:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .footer-social svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
 
         /* ===== UTILITIES ===== */
-        .scroll-progress { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--cta-green)); z-index: 10000; }
-        .back-to-top { position: fixed; bottom: 32px; right: 32px; width: 44px; height: 44px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 100; opacity: 0; transform: translateY(20px); transition: var(--transition-smooth); border: none; color: white; cursor: pointer; box-shadow: 0 4px 20px rgba(108,92,231,0.3); }
-        .back-to-top.visible { opacity: 1; transform: translateY(0); }
-        .back-to-top:hover { transform: translateY(-4px); }
-        .back-to-top svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; fill: none; }
-        .whatsapp-float { position: fixed; bottom: 32px; left: 32px; width: 52px; height: 52px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 100; box-shadow: 0 4px 20px rgba(37,211,102,0.3); transition: var(--transition-smooth); cursor: pointer; }
-        .whatsapp-float:hover { transform: scale(1.1) translateY(-4px); }
-        .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
-        .parallax-shape { position: absolute; pointer-events: none; }
-        .shape-diamond { width: 20px; height: 20px; background: var(--accent); transform: rotate(45deg); opacity: 0.08; }
-        .shape-circle { width: 12px; height: 12px; border: 2px solid var(--accent-glow); border-radius: 50%; opacity: 0.1; }
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--cta-green));
+            z-index: 10000;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition-smooth);
+            border: none;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-4px);
+        }
+
+        .back-to-top svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 32px;
+            left: 32px;
+            width: 52px;
+            height: 52px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-4px);
+        }
+
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .parallax-shape {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .shape-diamond {
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            transform: rotate(45deg);
+            opacity: 0.08;
+        }
+
+        .shape-circle {
+            width: 12px;
+            height: 12px;
+            border: 2px solid var(--accent-glow);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -487,7 +1965,7 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a href="#" class="nav-logo" data-cursor="pointer">
-            <img src="assets/vixel-logo.png" alt="Vixel Logo">
+            <img src="assests/vixel-logo.png" alt="Vixel Logo">
             Vixel
         </a>
         <ul class="nav-links">
@@ -522,16 +2000,28 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge reveal">Now taking new clients for 2026</div>
-                <h1 class="reveal">Websites that<br><span class="gradient-text">actually bring</span><br>you customers.</h1>
-                <p class="hero-description reveal">We design and build stunning, SEO-optimized websites for businesses across India. Your website becomes your hardest working employee, bringing you customers 24 hours a day, 7 days a week.</p>
+                <h1 class="reveal">Websites that<br><span class="gradient-text">actually bring</span><br>you customers.
+                </h1>
+                <p class="hero-description reveal">We design and build stunning, SEO-optimized websites for businesses
+                    across India. Your website becomes your hardest working employee, bringing you customers 24 hours a
+                    day, 7 days a week.</p>
                 <div class="hero-buttons reveal">
                     <a href="#contact" class="btn-primary" data-cursor="pointer">Get Your Free Audit &rarr;</a>
                     <a href="#portfolio" class="btn-secondary" data-cursor="pointer">See Our Work &darr;</a>
                 </div>
                 <div class="hero-stats reveal">
-                    <div class="stat-item"><h3 class="count-up" data-target="50">0</h3><p>Projects Delivered</p></div>
-                    <div class="stat-item"><h3><span class="count-up" data-target="200">0</span>%</h3><p>Avg. Traffic Increase</p></div>
-                    <div class="stat-item"><h3><span class="count-up" data-target="7">0</span> Days</h3><p>Average Delivery Time</p></div>
+                    <div class="stat-item">
+                        <h3 class="count-up" data-target="50">0</h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="count-up" data-target="200">0</span>%</h3>
+                        <p>Avg. Traffic Increase</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="count-up" data-target="7">0</span> Days</h3>
+                        <p>Average Delivery Time</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -564,22 +2054,35 @@
         <div class="container">
             <div class="section-label reveal">The Problem</div>
             <h2 class="section-title reveal">Is this your business right now?</h2>
-            <p class="section-subtitle reveal">Most businesses lose customers every single day because of these problems.</p>
+            <p class="section-subtitle reveal">Most businesses lose customers every single day because of these
+                problems.</p>
             <div class="problems-grid stagger-children">
                 <div class="problem-card reveal">
-                    <div class="problem-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                    <div class="problem-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg></div>
                     <h3>Invisible on Google</h3>
-                    <p>Hundreds of people search for your service every month. But they find your competitors instead because you have no website or a poor one.</p>
+                    <p>Hundreds of people search for your service every month. But they find your competitors instead
+                        because you have no website or a poor one.</p>
                 </div>
                 <div class="problem-card reveal">
-                    <div class="problem-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+                    <div class="problem-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                        </svg></div>
                     <h3>Broken on Mobile</h3>
-                    <p>70% of your potential customers browse on their phones. If your site is not mobile-friendly, they leave in 3 seconds.</p>
+                    <p>70% of your potential customers browse on their phones. If your site is not mobile-friendly, they
+                        leave in 3 seconds.</p>
                 </div>
                 <div class="problem-card reveal">
-                    <div class="problem-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                    <div class="problem-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg></div>
                     <h3>Losing Leads Daily</h3>
-                    <p>No online booking, no WhatsApp button, no contact form. Every day without these means lost revenue.</p>
+                    <p>No online booking, no WhatsApp button, no contact form. Every day without these means lost
+                        revenue.</p>
                 </div>
             </div>
         </div>
@@ -592,10 +2095,36 @@
             <h2 class="section-title reveal">Everything your business<br>needs to grow online</h2>
             <p class="section-subtitle reveal">From design to SEO to ongoing support. One team, zero headaches.</p>
             <div class="services-grid stagger-children">
-                <div class="service-card reveal"><span class="service-number">01</span><h3><svg class="icon-line" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Business Websites</h3><p>Professional, mobile-first websites built to convert visitors into paying customers.</p></div>
-                <div class="service-card reveal"><span class="service-number">02</span><h3><svg class="icon-line" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> SEO and Google Rankings</h3><p>We optimize every page so your business shows up when people search on Google.</p></div>
-                <div class="service-card reveal"><span class="service-number">03</span><h3><svg class="icon-line" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> WhatsApp and Booking</h3><p>Let customers contact you instantly or book appointments right from your website.</p></div>
-                <div class="service-card reveal"><span class="service-number">04</span><h3><svg class="icon-line" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg> Maintenance and Support</h3><p>We keep your site fast, secure, and updated. You focus on your business.</p></div>
+                <div class="service-card reveal"><span class="service-number">01</span>
+                    <h3><svg class="icon-line" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg> Business Websites</h3>
+                    <p>Professional, mobile-first websites built to convert visitors into paying customers.</p>
+                </div>
+                <div class="service-card reveal"><span class="service-number">02</span>
+                    <h3><svg class="icon-line" viewBox="0 0 24 24">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg> SEO and Google Rankings</h3>
+                    <p>We optimize every page so your business shows up when people search on Google.</p>
+                </div>
+                <div class="service-card reveal"><span class="service-number">03</span>
+                    <h3><svg class="icon-line" viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg> WhatsApp and Booking</h3>
+                    <p>Let customers contact you instantly or book appointments right from your website.</p>
+                </div>
+                <div class="service-card reveal"><span class="service-number">04</span>
+                    <h3><svg class="icon-line" viewBox="0 0 24 24">
+                            <polyline points="23 4 23 10 17 10" />
+                            <polyline points="1 20 1 14 7 14" />
+                            <path
+                                d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                        </svg> Maintenance and Support</h3>
+                    <p>We keep your site fast, secure, and updated. You focus on your business.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -603,12 +2132,33 @@
     <!-- PROCESS -->
     <section class="section process-section" id="process">
         <div class="container">
-            <div style="text-align:center"><div class="section-label reveal" style="justify-content:center">Our Process</div><h2 class="section-title reveal">From zero to live in 7 days</h2><p class="section-subtitle reveal" style="margin:0 auto">No complicated process. Just a clean, fast system that gets results.</p></div>
+            <div style="text-align:center">
+                <div class="section-label reveal" style="justify-content:center">Our Process</div>
+                <h2 class="section-title reveal">From zero to live in 7 days</h2>
+                <p class="section-subtitle reveal" style="margin:0 auto">No complicated process. Just a clean, fast
+                    system that gets results.</p>
+            </div>
             <div class="process-steps stagger-children">
-                <div class="step-card reveal"><div class="step-number">1</div><h3>Discovery Call</h3><p>Free 15-minute call to understand your business and goals.</p></div>
-                <div class="step-card reveal"><div class="step-number">2</div><h3>Design and Build</h3><p>We design your site in 3 to 5 days. You review, we refine.</p></div>
-                <div class="step-card reveal"><div class="step-number">3</div><h3>Launch</h3><p>Website goes live with full SEO and Google Business setup.</p></div>
-                <div class="step-card reveal"><div class="step-number">4</div><h3>Grow</h3><p>Monthly support and improvements to keep traffic growing.</p></div>
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Discovery Call</h3>
+                    <p>Free 15-minute call to understand your business and goals.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">2</div>
+                    <h3>Design and Build</h3>
+                    <p>We design your site in 3 to 5 days. You review, we refine.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">3</div>
+                    <h3>Launch</h3>
+                    <p>Website goes live with full SEO and Google Business setup.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">4</div>
+                    <h3>Grow</h3>
+                    <p>Monthly support and improvements to keep traffic growing.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -620,44 +2170,173 @@
             <h2 class="section-title reveal">Websites that work<br>as hard as you do</h2>
             <p class="section-subtitle reveal">Every project is built to convert visitors into customers.</p>
             <div class="portfolio-grid stagger-children">
-                <a href="#" class="portfolio-item reveal" data-cursor="pointer"><div class="portfolio-image"><span class="placeholder-text">Sharma Realty</span></div><div class="portfolio-info"><h3>Sharma Realty Group</h3><p>Property listings, lead capture forms, and Google SEO for a real estate agency.</p><span class="portfolio-tag">Real Estate</span></div></a>
-                <a href="#" class="portfolio-item reveal" data-cursor="pointer"><div class="portfolio-image"><span class="placeholder-text">SmileCare Dental</span></div><div class="portfolio-info"><h3>SmileCare Dental Clinic</h3><p>Appointment booking, treatment pages, doctor profiles, and local SEO.</p><span class="portfolio-tag">Healthcare</span></div></a>
+                <a href="#" class="portfolio-item reveal" data-cursor="pointer">
+                    <div class="portfolio-image"><span class="placeholder-text">Sharma Realty</span></div>
+                    <div class="portfolio-info">
+                        <h3>Sharma Realty Group</h3>
+                        <p>Property listings, lead capture forms, and Google SEO for a real estate agency.</p><span
+                            class="portfolio-tag">Real Estate</span>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-item reveal" data-cursor="pointer">
+                    <div class="portfolio-image"><span class="placeholder-text">SmileCare Dental</span></div>
+                    <div class="portfolio-info">
+                        <h3>SmileCare Dental Clinic</h3>
+                        <p>Appointment booking, treatment pages, doctor profiles, and local SEO.</p><span
+                            class="portfolio-tag">Healthcare</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
     <section class="section" id="testimonials">
-        <div class="container"><div style="text-align:center"><div class="section-label reveal" style="justify-content:center">Testimonials</div><h2 class="section-title reveal">What our clients say about us</h2></div></div>
+        <div class="container">
+            <div style="text-align:center">
+                <div class="section-label reveal" style="justify-content:center">Testimonials</div>
+                <h2 class="section-title reveal">What our clients say about us</h2>
+            </div>
+        </div>
         <div class="testimonials-track-wrapper">
             <div class="testimonials-track" id="testimonialTrack">
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Vixel built our clinic website in just 5 days. We started getting patient inquiries from Google within 2 weeks."</p><div class="testimonial-author"><div class="testimonial-avatar">RS</div><div class="testimonial-author-info"><h4>Dr. Rajesh Sharma</h4><p>SmileCare Dental</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Our old website looked like it was made in 2010. Vixel gave us a modern site and our leads doubled in the first month."</p><div class="testimonial-author"><div class="testimonial-avatar">AK</div><div class="testimonial-author-info"><h4>Amit Kumar</h4><p>Sharma Realty Group</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"I was skeptical because they are a young team. But our business now ranks on the first page of Google for 3 keywords."</p><div class="testimonial-author"><div class="testimonial-avatar">PG</div><div class="testimonial-author-info"><h4>Priya Gupta</h4><p>BrightPath Academy</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"The WhatsApp integration alone was worth it. We get 15 to 20 new inquiries every week without spending on ads."</p><div class="testimonial-author"><div class="testimonial-avatar">NM</div><div class="testimonial-author-info"><h4>Neha Malhotra</h4><p>Urban Luxe Salon</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Professional, fast, and affordable. My firm finally has an online presence that matches the quality of our work."</p><div class="testimonial-author"><div class="testimonial-avatar">SK</div><div class="testimonial-author-info"><h4>Suresh Khanna</h4><p>Khanna and Associates</p></div></div></div>
-                <!-- Duplicates for seamless loop -->
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Vixel built our clinic website in just 5 days. We started getting patient inquiries from Google within 2 weeks."</p><div class="testimonial-author"><div class="testimonial-avatar">RS</div><div class="testimonial-author-info"><h4>Dr. Rajesh Sharma</h4><p>SmileCare Dental</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Our old website looked like it was made in 2010. Vixel gave us a modern site and our leads doubled in the first month."</p><div class="testimonial-author"><div class="testimonial-avatar">AK</div><div class="testimonial-author-info"><h4>Amit Kumar</h4><p>Sharma Realty Group</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"I was skeptical because they are a young team. But our business now ranks on the first page of Google for 3 keywords."</p><div class="testimonial-author"><div class="testimonial-avatar">PG</div><div class="testimonial-author-info"><h4>Priya Gupta</h4><p>BrightPath Academy</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"The WhatsApp integration alone was worth it. We get 15 to 20 new inquiries every week without spending on ads."</p><div class="testimonial-author"><div class="testimonial-avatar">NM</div><div class="testimonial-author-info"><h4>Neha Malhotra</h4><p>Urban Luxe Salon</p></div></div></div>
-                <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Professional, fast, and affordable. My firm finally has an online presence that matches the quality of our work."</p><div class="testimonial-author"><div class="testimonial-avatar">SK</div><div class="testimonial-author-info"><h4>Suresh Khanna</h4><p>Khanna and Associates</p></div></div></div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Vixel built our clinic website in just 5 days. We started getting
+                        patient inquiries from Google within 2 weeks."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RS</div>
+                        <div class="testimonial-author-info">
+                            <h4>Dr. Rajesh Sharma</h4>
+                            <p>SmileCare Dental</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Our old website looked like it was made in 2010. Vixel gave us a modern
+                        site and our leads doubled in the first month."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-author-info">
+                            <h4>Amit Kumar</h4>
+                            <p>Sharma Realty Group</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"I was skeptical because they are a young team. But our business now
+                        ranks on the first page of Google for 3 keywords."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">PG</div>
+                        <div class="testimonial-author-info">
+                            <h4>Priya Gupta</h4>
+                            <p>BrightPath Academy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"The WhatsApp integration alone was worth it. We get 15 to 20 new
+                        inquiries every week without spending on ads."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">NM</div>
+                        <div class="testimonial-author-info">
+                            <h4>Neha Malhotra</h4>
+                            <p>Urban Luxe Salon</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Professional, fast, and affordable. My firm finally has an online
+                        presence that matches the quality of our work."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SK</div>
+                        <div class="testimonial-author-info">
+                            <h4>Suresh Khanna</h4>
+                            <p>Khanna and Associates</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="testimonials-nav">
-            <button class="testimonial-btn" id="testimonialPrev" data-cursor="pointer"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-            <button class="testimonial-btn" id="testimonialNext" data-cursor="pointer"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+            <button class="testimonial-btn" id="testimonialPrev" data-cursor="pointer"><svg viewBox="0 0 24 24">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg></button>
+            <button class="testimonial-btn" id="testimonialNext" data-cursor="pointer"><svg viewBox="0 0 24 24">
+                    <polyline points="9 6 15 12 9 18" />
+                </svg></button>
         </div>
     </section>
 
     <!-- PRICING -->
-    <section class="section" id="pricing" style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
+    <section class="section" id="pricing"
+        style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
         <div class="container">
-            <div style="text-align:center"><div class="section-label reveal" style="justify-content:center">Pricing</div><h2 class="section-title reveal">Transparent pricing.<br>No hidden costs. Ever.</h2><p class="section-subtitle reveal" style="margin:0 auto">Every plan includes mobile-first design, SEO setup, and WhatsApp integration.</p></div>
+            <div style="text-align:center">
+                <div class="section-label reveal" style="justify-content:center">Pricing</div>
+                <h2 class="section-title reveal">Transparent pricing.<br>No hidden costs. Ever.</h2>
+                <p class="section-subtitle reveal" style="margin:0 auto">Every plan includes mobile-first design, SEO
+                    setup, and WhatsApp integration.</p>
+            </div>
             <div class="pricing-grid stagger-children">
-                <div class="pricing-card reveal"><h3>Starter</h3><div class="price">&#8377;9,999</div><div class="price-note">One-time payment</div><ul class="pricing-features"><li>3 to 5 page responsive website</li><li>Mobile-first design</li><li>Contact form and WhatsApp button</li><li>Basic on-page SEO</li><li>Google Maps integration</li><li>1 round of revisions</li><li>Delivery in 5 to 7 days</li><li class="disabled">Google Business optimization</li><li class="disabled">Blog section</li><li class="disabled">Monthly maintenance</li></ul><a href="#contact" class="pricing-btn pricing-btn-outline" data-cursor="pointer">Get Started</a></div>
-                <div class="pricing-card featured reveal"><span class="pricing-badge">Most Popular</span><h3>Professional</h3><div class="price">&#8377;17,999</div><div class="price-note">One-time + &#8377;999/month maintenance</div><ul class="pricing-features"><li>5 to 8 page premium website</li><li>Custom design (not template)</li><li>Online booking system</li><li>Full on-page SEO</li><li>Google Business profile setup</li><li>Blog section with 2 articles</li><li>3 rounds of revisions</li><li>WhatsApp chat integration</li><li>Speed optimization</li><li class="disabled">Advanced SEO strategy</li></ul><a href="#contact" class="pricing-btn pricing-btn-primary" data-cursor="pointer">Get Started</a></div>
-                <div class="pricing-card reveal"><h3>Growth</h3><div class="price">&#8377;37,999</div><div class="price-note">One-time + &#8377;1,999/month maintenance</div><ul class="pricing-features"><li>Everything in Professional</li><li>Fully custom coded website</li><li>Advanced SEO strategy</li><li>4 blog articles per month</li><li>Monthly performance reports</li><li>Google Analytics setup</li><li>Social media integration</li><li>Priority support</li><li>Unlimited revisions for 30 days</li><li>Competitor analysis</li></ul><a href="#contact" class="pricing-btn pricing-btn-outline" data-cursor="pointer">Get Started</a></div>
+                <div class="pricing-card reveal">
+                    <h3>Starter</h3>
+                    <div class="price">&#8377;9,999</div>
+                    <div class="price-note">One-time payment</div>
+                    <ul class="pricing-features">
+                        <li>3 to 5 page responsive website</li>
+                        <li>Mobile-first design</li>
+                        <li>Contact form and WhatsApp button</li>
+                        <li>Basic on-page SEO</li>
+                        <li>Google Maps integration</li>
+                        <li>1 round of revisions</li>
+                        <li>Delivery in 5 to 7 days</li>
+                        <li class="disabled">Google Business optimization</li>
+                        <li class="disabled">Blog section</li>
+                        <li class="disabled">Monthly maintenance</li>
+                    </ul><a href="#contact" class="pricing-btn pricing-btn-outline" data-cursor="pointer">Get
+                        Started</a>
+                </div>
+                <div class="pricing-card featured reveal"><span class="pricing-badge">Most Popular</span>
+                    <h3>Professional</h3>
+                    <div class="price">&#8377;17,999</div>
+                    <div class="price-note">One-time + &#8377;999/month maintenance</div>
+                    <ul class="pricing-features">
+                        <li>5 to 8 page premium website</li>
+                        <li>Custom design (not template)</li>
+                        <li>Online booking system</li>
+                        <li>Full on-page SEO</li>
+                        <li>Google Business profile setup</li>
+                        <li>Blog section with 2 articles</li>
+                        <li>3 rounds of revisions</li>
+                        <li>WhatsApp chat integration</li>
+                        <li>Speed optimization</li>
+                        <li class="disabled">Advanced SEO strategy</li>
+                    </ul><a href="#contact" class="pricing-btn pricing-btn-primary" data-cursor="pointer">Get
+                        Started</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <h3>Growth</h3>
+                    <div class="price">&#8377;37,999</div>
+                    <div class="price-note">One-time + &#8377;1,999/month maintenance</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Professional</li>
+                        <li>Fully custom coded website</li>
+                        <li>Advanced SEO strategy</li>
+                        <li>4 blog articles per month</li>
+                        <li>Monthly performance reports</li>
+                        <li>Google Analytics setup</li>
+                        <li>Social media integration</li>
+                        <li>Priority support</li>
+                        <li>Unlimited revisions for 30 days</li>
+                        <li>Competitor analysis</li>
+                    </ul><a href="#contact" class="pricing-btn pricing-btn-outline" data-cursor="pointer">Get
+                        Started</a>
+                </div>
             </div>
         </div>
     </section>
@@ -665,43 +2344,172 @@
     <!-- SEO -->
     <section class="section seo-section" id="seo">
         <div class="container">
-            <div style="text-align:center"><div class="section-label reveal" style="justify-content:center">SEO Built In</div><h2 class="section-title reveal">Every website we build is<br>engineered to rank on Google</h2></div>
+            <div style="text-align:center">
+                <div class="section-label reveal" style="justify-content:center">SEO Built In</div>
+                <h2 class="section-title reveal">Every website we build is<br>engineered to rank on Google</h2>
+            </div>
             <div class="seo-grid stagger-children">
-                <div class="seo-card reveal"><div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>Technical SEO</h3><p>Clean code, fast loading, schema markup, sitemap, and robots.txt.</p></div>
-                <div class="seo-card reveal"><div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>On-Page SEO</h3><p>Keyword-optimized titles, meta descriptions, headers, and alt text.</p></div>
-                <div class="seo-card reveal"><div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Local SEO</h3><p>Google Business Profile, local keywords, and NAP consistency.</p></div>
-                <div class="seo-card reveal"><div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Page Speed</h3><p>Optimized images, minified code. Loads in under 2 seconds.</p></div>
-                <div class="seo-card reveal"><div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div><h3>Analytics Setup</h3><p>Google Analytics and Search Console from day one.</p></div>
-                <div class="seo-card reveal"><div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></div><h3>SEO Blog Content</h3><p>Strategic articles targeting keywords your customers search for.</p></div>
+                <div class="seo-card reveal">
+                    <div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg></div>
+                    <h3>Technical SEO</h3>
+                    <p>Clean code, fast loading, schema markup, sitemap, and robots.txt.</p>
+                </div>
+                <div class="seo-card reveal">
+                    <div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg></div>
+                    <h3>On-Page SEO</h3>
+                    <p>Keyword-optimized titles, meta descriptions, headers, and alt text.</p>
+                </div>
+                <div class="seo-card reveal">
+                    <div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg></div>
+                    <h3>Local SEO</h3>
+                    <p>Google Business Profile, local keywords, and NAP consistency.</p>
+                </div>
+                <div class="seo-card reveal">
+                    <div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg></div>
+                    <h3>Page Speed</h3>
+                    <p>Optimized images, minified code. Loads in under 2 seconds.</p>
+                </div>
+                <div class="seo-card reveal">
+                    <div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <path d="M18 20V10" />
+                            <path d="M12 20V4" />
+                            <path d="M6 20v-6" />
+                        </svg></div>
+                    <h3>Analytics Setup</h3>
+                    <p>Google Analytics and Search Console from day one.</p>
+                </div>
+                <div class="seo-card reveal">
+                    <div class="seo-icon"><svg class="icon-line-lg" viewBox="0 0 24 24">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg></div>
+                    <h3>SEO Blog Content</h3>
+                    <p>Strategic articles targeting keywords your customers search for.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- BLOG -->
+    <!-- BLOG - VERTICAL -->
     <section class="section" id="blog">
         <div class="container">
             <div class="section-label reveal">Blog</div>
             <h2 class="section-title reveal">Learn. Build. Grow.</h2>
             <p class="section-subtitle reveal">Practical tips on websites, SEO, and growing your business online.</p>
-            <div class="blog-grid stagger-children">
-                <a href="blog-how-website-is-made.html" class="blog-card reveal" data-cursor="pointer"><div class="blog-image"><img src="assets/blog-how-website-made.jpg" alt="How a website is actually made" loading="lazy"></div><div class="blog-content"><span class="blog-tag">Website Basics</span><h3>How a Website is Actually Made: The Complete Guide</h3><p>A simple, jargon-free explanation of how modern websites are built.</p><div class="blog-meta"><span>5 min read</span><span>|</span><span>March 2026</span></div></div></a>
-                <a href="blog-why-not-on-google.html" class="blog-card reveal" data-cursor="pointer"><div class="blog-image"><img src="assets/blog-why-not-on-google.jpg" alt="Why your business does not show up on Google" loading="lazy"></div><div class="blog-content"><span class="blog-tag">SEO</span><h3>Why Your Business Does Not Show Up on Google</h3><p>5 common reasons and exactly how to fix each one.</p><div class="blog-meta"><span>4 min read</span><span>|</span><span>March 2026</span></div></div></a>
-                <a href="blog-best-website-builders.html" class="blog-card reveal" data-cursor="pointer"><div class="blog-image"><img src="assets/blog-best-website-builders.jpg" alt="5 best website builders in 2026" loading="lazy"></div><div class="blog-content"><span class="blog-tag">Tools</span><h3>5 Best Website Builders in 2026: Which One to Use?</h3><p>WordPress, Wix, Framer, Hostinger, or custom code? Honest comparison.</p><div class="blog-meta"><span>6 min read</span><span>|</span><span>March 2026</span></div></div></a>
+            <div class="blog-list stagger-children">
+                <a href="blog-how-website-is-made.html" class="blog-card reveal" data-cursor="pointer">
+                    <div class="blog-card-accent"></div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Website Basics</span>
+                        <h3>How a Website is Actually Made: The Complete Guide</h3>
+                        <p>A simple, jargon-free explanation of how modern websites are built from scratch.</p>
+                        <div class="blog-meta">
+                            <span>5 min read</span>
+                            <span>|</span>
+                            <span>March 2026</span>
+                            <span class="blog-read-more">Read More &rarr;</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog-why-not-on-google.html" class="blog-card reveal" data-cursor="pointer">
+                    <div class="blog-card-accent"></div>
+                    <div class="blog-content">
+                        <span class="blog-tag">SEO</span>
+                        <h3>Why Your Business Does Not Show Up on Google</h3>
+                        <p>5 common reasons and exactly how to fix each one to get found online.</p>
+                        <div class="blog-meta">
+                            <span>4 min read</span>
+                            <span>|</span>
+                            <span>March 2026</span>
+                            <span class="blog-read-more">Read More &rarr;</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog-best-website-builders.html" class="blog-card reveal" data-cursor="pointer">
+                    <div class="blog-card-accent"></div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Tools</span>
+                        <h3>5 Best Website Builders in 2026: Which One to Use?</h3>
+                        <p>WordPress, Wix, Framer, Hostinger, or custom code? An honest comparison.</p>
+                        <div class="blog-meta">
+                            <span>6 min read</span>
+                            <span>|</span>
+                            <span>March 2026</span>
+                            <span class="blog-read-more">Read More &rarr;</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section" id="faq" style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
+    <section class="section" id="faq"
+        style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
         <div class="container">
-            <div style="text-align:center"><div class="section-label reveal" style="justify-content:center">FAQ</div><h2 class="section-title reveal">Got questions? We have answers.</h2></div>
+            <div style="text-align:center">
+                <div class="section-label reveal" style="justify-content:center">FAQ</div>
+                <h2 class="section-title reveal">Got questions? We have answers.</h2>
+            </div>
             <div class="faq-list">
-                <div class="faq-item reveal" data-cursor="pointer"><div class="faq-question"><span>How long does it take to build my website?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Most websites are ready in 5 to 7 business days. Complex projects may take 10 to 14 days.</p></div></div>
-                <div class="faq-item reveal" data-cursor="pointer"><div class="faq-question"><span>Do I need to provide content and images?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>We handle everything. Just share your business details and any photos you have.</p></div></div>
-                <div class="faq-item reveal" data-cursor="pointer"><div class="faq-question"><span>Will my website work on mobile phones?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Every website we build is mobile-first. Over 70 percent of visitors come from mobile.</p></div></div>
-                <div class="faq-item reveal" data-cursor="pointer"><div class="faq-question"><span>Will my website rank on Google?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Every website includes on-page SEO, Google Business setup, and technical optimization for the best chance of ranking.</p></div></div>
-                <div class="faq-item reveal" data-cursor="pointer"><div class="faq-question"><span>What if I need changes after the website is live?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Our maintenance plans include unlimited minor edits. Major redesigns get a separate quote.</p></div></div>
-                <div class="faq-item reveal" data-cursor="pointer"><div class="faq-question"><span>How much does hosting and domain cost?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>A domain costs around Rs 500 to Rs 800 per year. Hosting runs Rs 100 to Rs 300 per month.</p></div></div>
+                <div class="faq-item reveal" data-cursor="pointer">
+                    <div class="faq-question"><span>How long does it take to build my website?</span><span
+                            class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>Most websites are ready in 5 to 7 business days. Complex projects may take 10 to 14 days.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-cursor="pointer">
+                    <div class="faq-question"><span>Do I need to provide content and images?</span><span
+                            class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>We handle everything. Just share your business details and any photos you have.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-cursor="pointer">
+                    <div class="faq-question"><span>Will my website work on mobile phones?</span><span
+                            class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>Every website we build is mobile-first. Over 70 percent of visitors come from mobile.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-cursor="pointer">
+                    <div class="faq-question"><span>Will my website rank on Google?</span><span
+                            class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>Every website includes on-page SEO, Google Business setup, and technical optimization for the
+                            best chance of ranking.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-cursor="pointer">
+                    <div class="faq-question"><span>What if I need changes after the website is live?</span><span
+                            class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>Our maintenance plans include unlimited minor edits. Major redesigns get a separate quote.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-cursor="pointer">
+                    <div class="faq-question"><span>How much does hosting and domain cost?</span><span
+                            class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>A domain costs around Rs 500 to Rs 800 per year. Hosting runs Rs 100 to Rs 300 per month.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -713,19 +2521,24 @@
             <h2 class="reveal">Get a website that<br><span class="gradient-text">brings you customers.</span></h2>
             <p class="reveal">Book a free 15-minute call. No pressure. No commitment.</p>
             <div class="cta-buttons reveal">
-                <a href="https://wa.me/919XXXXXXXXX?text=Hi%20Vixel%2C%20I%20am%20interested%20in%20getting%20a%20website." class="btn-primary" data-cursor="pointer" target="_blank">WhatsApp Us Now &rarr;</a>
+                <a href="https://wa.me/919XXXXXXXXX?text=Hi%20Vixel%2C%20I%20am%20interested%20in%20getting%20a%20website."
+                    class="btn-primary" data-cursor="pointer" target="_blank">WhatsApp Us Now &rarr;</a>
                 <a href="mailto:hello@vixel.in" class="btn-secondary" data-cursor="pointer">Send an Email &rarr;</a>
             </div>
             <form id="contactForm" class="contact-form reveal">
                 <input type="text" id="clientName" placeholder="Your Name" required data-cursor="pointer">
                 <input type="tel" id="clientPhone" placeholder="Your Phone Number" required data-cursor="pointer">
-                <select id="clientService" data-cursor="pointer">
-                    <option value="Starter Website">Starter Website (Rs 9,999)</option>
-                    <option value="Professional Website" selected>Professional Website (Rs 17,999)</option>
-                    <option value="Growth Website">Growth Website (Rs 37,999)</option>
-                    <option value="Not Sure">Not sure yet</option>
-                </select>
-                <button type="submit" class="btn-primary" style="border:none;justify-content:center;width:100%" data-cursor="pointer">Send Inquiry via WhatsApp &rarr;</button>
+                <div class="select-wrapper">
+                    <select id="clientService" data-cursor="pointer">
+                        <option value="Starter Website">Starter Website (Rs 9,999)</option>
+                        <option value="Professional Website" selected>Professional Website (Rs 17,999)</option>
+                        <option value="Growth Website">Growth Website (Rs 37,999)</option>
+                        <option value="Not Sure">Not sure yet</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary"
+                    style="border:none;justify-content:center;width:100%" data-cursor="pointer">Send Inquiry via
+                    WhatsApp &rarr;</button>
             </form>
         </div>
     </section>
@@ -735,31 +2548,57 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="nav-logo" data-cursor="pointer"><img src="assets/vixel-logo.png" alt="Vixel" style="height:30px;width:auto"> Vixel</a>
-                    <p>We build stunning, SEO-optimized websites that help businesses get found on Google. Based in India, serving businesses nationwide.</p>
+                    <a href="#" class="nav-logo" data-cursor="pointer"><img src="assests/vixel-logo.png" alt="Vixel"
+                            style="height:30px;width:auto"> Vixel</a>
+                    <p>We build stunning, SEO-optimized websites that help businesses get found on Google. Based in
+                        India, serving businesses nationwide.</p>
                 </div>
-                <div class="footer-links"><h4>Navigation</h4><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div>
-                <div class="footer-links"><h4>Services</h4><a href="#services">Business Websites</a><a href="#services">SEO Optimization</a><a href="#services">Google Business Setup</a><a href="#services">Website Maintenance</a></div>
-                <div class="footer-links"><h4>Resources</h4><a href="#blog">Blog</a><a href="#faq">FAQ</a><a href="#pricing">Pricing</a><a href="#contact">Free Audit</a></div>
+                <div class="footer-links">
+                    <h4>Navigation</h4><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a
+                        href="#pricing">Pricing</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4><a href="#services">Business Websites</a><a href="#services">SEO
+                        Optimization</a><a href="#services">Google Business Setup</a><a href="#services">Website
+                        Maintenance</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4><a href="#blog">Blog</a><a href="#faq">FAQ</a><a
+                        href="#pricing">Pricing</a><a href="#contact">Free Audit</a>
+                </div>
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 Vixel. All rights reserved.</span>
                 <div class="footer-social">
-                    <a href="#" data-cursor="pointer" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    <a href="#" data-cursor="pointer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    <a href="#" data-cursor="pointer" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                    <a href="#" data-cursor="pointer" aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/919XXXXXXXXX?text=Hi%20Vixel" class="whatsapp-float" data-cursor="pointer" target="_blank" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <a href="https://wa.me/919XXXXXXXXX?text=Hi%20Vixel" class="whatsapp-float" data-cursor="pointer" target="_blank"
+        aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
     </a>
 
     <!-- BACK TO TOP -->
     <button class="back-to-top" id="backToTop" data-cursor="pointer" aria-label="Back to top">
-        <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+        <svg viewBox="0 0 24 24">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
     </button>
 
     <script>
@@ -848,21 +2687,80 @@
         }, { threshold: 0.5 });
         document.querySelectorAll('.count-up').forEach(el => co.observe(el));
 
-        // TESTIMONIAL NAV
-        const tTrack = document.getElementById('testimonialTrack');
-        document.getElementById('testimonialPrev').addEventListener('click', () => {
-            tTrack.style.animationPlayState = 'paused';
-            tTrack.scrollLeft -= 384;
-            setTimeout(() => tTrack.style.animationPlayState = 'running', 5000);
-        });
-        document.getElementById('testimonialNext').addEventListener('click', () => {
-            tTrack.style.animationPlayState = 'paused';
-            tTrack.scrollLeft += 384;
-            setTimeout(() => tTrack.style.animationPlayState = 'running', 5000);
-        });
+        // TESTIMONIAL NAV - FUNCTIONAL CAROUSEL
+        (function () {
+            const track = document.getElementById('testimonialTrack');
+            const cards = track.querySelectorAll('.testimonial-card');
+            const totalCards = cards.length;
+            let currentIndex = 0;
+            let autoplayTimer;
+            const cardWidth = 384; // 360px card + 24px gap
+
+            function getVisibleCards() {
+                const wrapperWidth = track.parentElement.offsetWidth;
+                return Math.max(1, Math.floor(wrapperWidth / cardWidth));
+            }
+
+            function updatePosition(smooth) {
+                const maxIndex = Math.max(0, totalCards - getVisibleCards());
+                if (currentIndex > maxIndex) currentIndex = maxIndex;
+                if (currentIndex < 0) currentIndex = 0;
+
+                if (smooth) {
+                    track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                } else {
+                    track.style.transition = 'none';
+                }
+                track.style.transform = 'translateX(-' + (currentIndex * cardWidth) + 'px)';
+            }
+
+            function startAutoplay() {
+                stopAutoplay();
+                autoplayTimer = setInterval(() => {
+                    const maxIndex = Math.max(0, totalCards - getVisibleCards());
+                    currentIndex++;
+                    if (currentIndex > maxIndex) currentIndex = 0;
+                    updatePosition(true);
+                }, 4000);
+            }
+
+            function stopAutoplay() {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+            }
+
+            document.getElementById('testimonialPrev').addEventListener('click', () => {
+                stopAutoplay();
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = Math.max(0, totalCards - getVisibleCards());
+                }
+                updatePosition(true);
+                startAutoplay();
+            });
+
+            document.getElementById('testimonialNext').addEventListener('click', () => {
+                stopAutoplay();
+                const maxIndex = Math.max(0, totalCards - getVisibleCards());
+                currentIndex++;
+                if (currentIndex > maxIndex) currentIndex = 0;
+                updatePosition(true);
+                startAutoplay();
+            });
+
+            // Pause on hover
+            track.addEventListener('mouseenter', stopAutoplay);
+            track.addEventListener('mouseleave', startAutoplay);
+
+            // Initialize
+            updatePosition(false);
+            startAutoplay();
+
+            // Recalculate on resize
+            window.addEventListener('resize', () => updatePosition(false));
+        })();
 
         // CONTACT FORM
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const n = document.getElementById('clientName').value;
             const p = document.getElementById('clientPhone').value;
@@ -871,7 +2769,7 @@
         });
 
         // SMOOTH SCROLL
-        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e) {
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function (e) {
             const h = this.getAttribute('href');
             if (h === '#') return;
             e.preventDefault();
