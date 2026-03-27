@@ -23,7 +23,7 @@
         "headline": "Why Your Business Does Not Show Up on Google (and How to Fix It)",
         "description": "5 common reasons your business is invisible on Google Search and practical steps to fix each one.",
         "author": {"@type": "Organization", "name": "Vixel"},
-        "publisher": {"@type": "Organization", "name": "Vixel", "logo": {"@type": "ImageObject", "url": "https://vixel.in/logo.png"}},
+        "publisher": {"@type": "Organization", "name": "Vixel", "logo": {"@type": "ImageObject", "url": "https://vixel.in/assests/vixel-logo.png"}},
         "datePublished": "2026-03-18",
         "dateModified": "2026-03-18",
         "mainEntityOfPage": {"@type": "WebPage", "@id": "https://vixel.in/blog/why-not-on-google"},
@@ -32,7 +32,6 @@
     }
     </script>
 
-    <!-- FIX: Added missing preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,14 +59,12 @@
         a { color: var(--accent-glow); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* SCROLL PROGRESS */
         .scroll-progress {
             position: fixed; top: 0; left: 0; width: 0%; height: 3px;
             background: linear-gradient(90deg, var(--accent), #10b981);
             z-index: 10000; transition: width 0.1s linear;
         }
 
-        /* NAV */
         .blog-nav {
             position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
             z-index: 1000;
@@ -88,12 +85,8 @@
             display: flex; align-items: center; gap: 8px;
             color: var(--text); cursor: pointer;
         }
-        .blog-nav-logo span {
-            width: 28px; height: 28px;
-            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
-            border-radius: 6px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.75rem; font-weight: 800;
+        .blog-nav-logo img {
+            height: 26px; width: auto;
         }
         .blog-nav-back {
             font-size: 0.85rem; color: var(--text-sec);
@@ -104,7 +97,6 @@
         }
         .blog-nav-back:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
 
-        /* ARTICLE */
         .blog-article { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
 
         .blog-article-tag {
@@ -127,7 +119,6 @@
             display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
         }
 
-        /* HERO IMAGE */
         .blog-hero-image {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -177,7 +168,6 @@
         }
         .blog-cta-btn:hover { background: var(--accent-glow); text-decoration: none; transform: translateY(-2px); }
 
-        /* FOOTER */
         .blog-footer {
             border-top: 1px solid var(--border); padding: 32px 24px;
             text-align: center; font-size: 0.8rem; color: var(--text-muted);
@@ -194,8 +184,11 @@
     <div class="scroll-progress" id="scrollProgress"></div>
 
     <nav class="blog-nav" id="blogNav">
-        <a href="/" class="blog-nav-logo"><span>V</span> Vixel</a>
-        <a href="/#blog" class="blog-nav-back">← Back to Blog</a>
+        <a href="index.html" class="blog-nav-logo">
+            <img src="assests/vixel-logo.png" alt="Vixel Logo">
+            Vixel
+        </a>
+        <a href="index.html#blog" class="blog-nav-back">&larr; Back to Blog</a>
     </nav>
 
     <article class="blog-article">
@@ -209,7 +202,6 @@
             <span>March 2026</span>
         </div>
 
-        <!-- HERO IMAGE -->
         <div class="blog-hero-image">
             <img src="assests/blog-why-not-on-google.jpg" alt="Why your business does not show up on Google - illustration showing SEO problems" loading="lazy">
         </div>
@@ -308,12 +300,12 @@
         <div class="blog-cta-box">
             <h3>Not sure where your business stands on Google?</h3>
             <p>We will audit your online presence for free and show you exactly what needs to be fixed. No strings attached.</p>
-            <a href="https://vixel.in/#contact" class="blog-cta-btn">Get Your Free Audit →</a>
+            <a href="index.html#contact" class="blog-cta-btn">Get Your Free Audit &rarr;</a>
         </div>
     </article>
 
     <footer class="blog-footer">
-        &copy; 2026 Vixel. All rights reserved. | <a href="/">Home</a> | <a href="/#blog">Blog</a>
+        &copy; 2026 Vixel. All rights reserved. | <a href="index.html">Home</a> | <a href="index.html#blog">Blog</a>
     </footer>
 
     <script>
