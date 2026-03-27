@@ -23,7 +23,7 @@
         "headline": "5 Best Website Builders in 2026: Which One Should You Use?",
         "description": "An honest comparison of the top website building platforms for small businesses in India.",
         "author": {"@type": "Organization", "name": "Vixel"},
-        "publisher": {"@type": "Organization", "name": "Vixel", "logo": {"@type": "ImageObject", "url": "https://vixel.in/logo.png"}},
+        "publisher": {"@type": "Organization", "name": "Vixel", "logo": {"@type": "ImageObject", "url": "https://vixel.in/assests/vixel-logo.png"}},
         "datePublished": "2026-03-22",
         "dateModified": "2026-03-22",
         "mainEntityOfPage": {"@type": "WebPage", "@id": "https://vixel.in/blog/best-website-builders-2026"},
@@ -32,7 +32,6 @@
     }
     </script>
 
-    <!-- FIX: Added missing preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,14 +59,12 @@
         a { color: var(--accent-glow); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* SCROLL PROGRESS */
         .scroll-progress {
             position: fixed; top: 0; left: 0; width: 0%; height: 3px;
             background: linear-gradient(90deg, var(--accent), #10b981);
             z-index: 10000; transition: width 0.1s linear;
         }
 
-        /* NAV */
         .blog-nav {
             position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
             z-index: 1000;
@@ -88,12 +85,8 @@
             display: flex; align-items: center; gap: 8px;
             color: var(--text); cursor: pointer;
         }
-        .blog-nav-logo span {
-            width: 28px; height: 28px;
-            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
-            border-radius: 6px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.75rem; font-weight: 800;
+        .blog-nav-logo img {
+            height: 26px; width: auto;
         }
         .blog-nav-back {
             font-size: 0.85rem; color: var(--text-sec);
@@ -104,7 +97,6 @@
         }
         .blog-nav-back:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
 
-        /* ARTICLE */
         .blog-article { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
 
         .blog-article-tag {
@@ -127,7 +119,6 @@
             display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
         }
 
-        /* HERO IMAGE */
         .blog-hero-image {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -178,7 +169,6 @@
         }
         .blog-cta-btn:hover { background: var(--accent-glow); text-decoration: none; transform: translateY(-2px); }
 
-        /* FIX: Comparison table — wrapped in scroll container for mobile */
         .table-wrapper {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
@@ -190,7 +180,7 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 0.88rem;
-            min-width: 560px; /* prevents columns from collapsing too small */
+            min-width: 560px;
         }
         .comparison-table th {
             background: var(--bg-card); color: var(--accent-glow);
@@ -206,7 +196,6 @@
         .comparison-table tr:last-child td { border-bottom: none; }
         .comparison-table tr:hover td { background: rgba(108,92,231,0.03); }
 
-        /* FOOTER */
         .blog-footer {
             border-top: 1px solid var(--border); padding: 32px 24px;
             text-align: center; font-size: 0.8rem; color: var(--text-muted);
@@ -223,8 +212,11 @@
     <div class="scroll-progress" id="scrollProgress"></div>
 
     <nav class="blog-nav" id="blogNav">
-        <a href="/" class="blog-nav-logo"><span>V</span> Vixel</a>
-        <a href="/#blog" class="blog-nav-back">← Back to Blog</a>
+        <a href="index.html" class="blog-nav-logo">
+            <img src="assests/vixel-logo.png" alt="Vixel Logo">
+            Vixel
+        </a>
+        <a href="index.html#blog" class="blog-nav-back">&larr; Back to Blog</a>
     </nav>
 
     <article class="blog-article">
@@ -238,7 +230,6 @@
             <span>March 2026</span>
         </div>
 
-        <!-- HERO IMAGE -->
         <div class="blog-hero-image">
             <img src="assests/blog-best-website-builders.jpg" alt="5 best website builders in 2026 - comparison illustration" loading="lazy">
         </div>
@@ -247,7 +238,6 @@
 
         <p>We have built websites on almost every platform. In this guide, we compare the <strong>5 most relevant options for Indian businesses in 2026</strong> and tell you honestly which one is right for your situation.</p>
 
-        <!-- FIX: Table wrapped in .table-wrapper for horizontal scroll on mobile -->
         <div class="table-wrapper">
             <table class="comparison-table">
                 <thead>
@@ -431,12 +421,12 @@
         <div class="blog-cta-box">
             <h3>Not sure which approach is right for your business?</h3>
             <p>Book a free 15-minute call with us. We will listen to your needs and recommend the best solution, honestly.</p>
-            <a href="https://vixel.in/#contact" class="blog-cta-btn">Book a Free Call →</a>
+            <a href="index.html#contact" class="blog-cta-btn">Book a Free Call &rarr;</a>
         </div>
     </article>
 
     <footer class="blog-footer">
-        &copy; 2026 Vixel. All rights reserved. | <a href="/">Home</a> | <a href="/#blog">Blog</a>
+        &copy; 2026 Vixel. All rights reserved. | <a href="index.html">Home</a> | <a href="index.html#blog">Blog</a>
     </footer>
 
     <script>
