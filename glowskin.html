@@ -44,6 +44,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px; font-weight: 400; letter-spacing: 2px;
     color: var(--charcoal);
+    z-index: 101;
   }
   .nav-logo span { color: var(--rose); }
   .nav-links { display: flex; gap: 36px; list-style: none; }
@@ -61,6 +62,97 @@
     transition: background 0.3s;
   }
   .nav-cta:hover { background: var(--rose-dark); }
+
+  /* ── HAMBURGER ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 101;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--charcoal);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger span:nth-child(1) { margin-bottom: 5px; }
+  .hamburger span:nth-child(2) { margin-bottom: 5px; }
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--cream);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+  .mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+  }
+  .mobile-menu a:hover { color: var(--rose); }
+  .mobile-menu .nav-cta {
+    margin-top: 20px;
+    padding: 14px 32px;
+    font-size: 12px;
+  }
+
+  /* ── LINE ART ICONS ── */
+  .line-icon {
+    width: 32px;
+    height: 32px;
+    stroke: var(--rose);
+    stroke-width: 1.2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .line-icon-sm {
+    width: 24px;
+    height: 24px;
+  }
+  .line-icon-lg {
+    width: 48px;
+    height: 48px;
+  }
 
   /* ── HERO ── */
   .hero {
@@ -93,13 +185,14 @@
     font-size: 15px; font-weight: 300; line-height: 1.8;
     color: var(--mid); max-width: 420px; margin-bottom: 44px;
   }
-  .hero-btns { display: flex; gap: 16px; align-items: center; }
+  .hero-btns { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
   .btn-primary {
     background: var(--charcoal); color: white;
     padding: 16px 36px; border-radius: 2px;
     font-size: 11px; font-weight: 600; letter-spacing: 2px;
     text-transform: uppercase; text-decoration: none;
     transition: all 0.3s;
+    text-align: center;
   }
   .btn-primary:hover { background: var(--rose); }
   .btn-ghost {
@@ -114,6 +207,7 @@
   .hero-stats {
     display: flex; gap: 40px; margin-top: 56px;
     padding-top: 40px; border-top: 1px solid rgba(201,132,122,0.2);
+    flex-wrap: wrap;
   }
   .stat-item { }
   .stat-num {
@@ -152,6 +246,7 @@
     border: 1px solid rgba(201,132,122,0.2);
     display: flex; align-items: center; justify-content: center;
     animation: slowSpin 20s linear infinite;
+    position: relative;
   }
   .hero-circle-inner {
     width: 280px; height: 280px; border-radius: 50%;
@@ -185,7 +280,8 @@
   .fc-label { color: var(--light); font-size: 10px; letter-spacing: 0.5px; margin-bottom: 4px; }
   .fc-val { font-weight: 600; color: var(--charcoal); font-size: 14px; }
   .fc-badge {
-    display: inline-block; background: rgba(138,158,140,0.15);
+    display: inline-flex; align-items: center; gap: 4px;
+    background: rgba(138,158,140,0.15);
     color: var(--sage); font-size: 10px; font-weight: 600;
     padding: 2px 8px; border-radius: 20px; margin-top: 4px;
   }
@@ -242,10 +338,17 @@
   .service-card:hover::before { transform: scaleX(1); }
   .service-card:hover { background: white; }
   .service-icon {
-    width: 48px; height: 48px; border-radius: 50%;
-    background: rgba(201,132,122,0.1);
+    width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(201,132,122,0.08);
     display: flex; align-items: center; justify-content: center;
-    margin-bottom: 24px; font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .service-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--rose);
+    stroke-width: 1.2;
+    fill: none;
   }
   .service-name {
     font-family: 'Cormorant Garamond', serif;
@@ -299,8 +402,14 @@
     display: flex; align-items: center; justify-content: center;
   }
   .ba-placeholder {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px; color: rgba(201,132,122,0.3); font-style: italic;
+    opacity: 0.3;
+  }
+  .ba-placeholder svg {
+    width: 64px;
+    height: 64px;
+    stroke: var(--rose);
+    stroke-width: 0.8;
+    fill: none;
   }
   .ba-tag {
     position: absolute; top: 12px; left: 12px;
@@ -321,7 +430,13 @@
     background: linear-gradient(135deg, rgba(201,132,122,0.15), rgba(138,158,140,0.15));
     border: 2px solid rgba(201,132,122,0.2);
     display: flex; align-items: center; justify-content: center;
-    font-size: 40px;
+  }
+  .doctor-avatar svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--rose);
+    stroke-width: 1;
+    fill: none;
   }
   .doctor-name {
     font-family: 'Cormorant Garamond', serif;
@@ -337,7 +452,17 @@
     background: white; padding: 32px 28px; border-radius: 4px;
     border: 1px solid rgba(201,132,122,0.1);
   }
-  .t-stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+  .t-stars { 
+    display: flex; 
+    gap: 4px; 
+    margin-bottom: 16px; 
+  }
+  .t-stars svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--gold);
+    stroke: none;
+  }
   .t-text { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--mid); margin-bottom: 20px; font-style: italic; }
   .t-author { font-size: 12px; font-weight: 600; color: var(--charcoal); letter-spacing: 0.5px; }
   .t-tag { font-size: 11px; color: var(--light); margin-top: 2px; }
@@ -354,7 +479,7 @@
   .booking-left .section-title { color: white; margin-bottom: 20px; max-width: none; }
   .booking-left .section-title em { color: var(--rose-light); }
   .booking-sub { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.8; margin-bottom: 36px; }
-  .booking-options { display: flex; gap: 16px; }
+  .booking-options { display: flex; gap: 16px; flex-wrap: wrap; }
   .book-option {
     display: flex; align-items: center; gap: 10px;
     background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
@@ -365,6 +490,10 @@
   .book-option:hover { background: rgba(201,132,122,0.2); border-color: var(--rose); }
   .book-option.wa { background: rgba(37,211,102,0.1); border-color: rgba(37,211,102,0.3); }
   .book-option.wa:hover { background: rgba(37,211,102,0.2); }
+  .book-option svg {
+    width: 18px;
+    height: 18px;
+  }
   .booking-right { }
   .form-card {
     background: white; border-radius: 8px; padding: 40px;
@@ -384,6 +513,10 @@
     border: 1px solid rgba(201,132,122,0.2); border-radius: 4px;
     font-family: 'Jost', sans-serif; font-size: 14px; color: var(--charcoal);
     background: var(--cream); outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b5f58' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
   }
   .form-btn {
     width: 100%; background: var(--rose); color: white;
@@ -391,21 +524,31 @@
     font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
     letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
     transition: background 0.3s; margin-top: 8px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
   }
   .form-btn:hover { background: var(--rose-dark); }
+  .form-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+  }
 
   /* ── FOOTER ── */
   footer {
     background: var(--charcoal); color: rgba(255,255,255,0.4);
     padding: 48px 80px;
     display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
   }
   .footer-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px; font-weight: 400; color: white; letter-spacing: 2px;
   }
   .footer-logo span { color: var(--rose); }
-  .footer-links { display: flex; gap: 24px; }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
   .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.3s; }
   .footer-links a:hover { color: var(--rose); }
   .footer-copy { font-size: 11px; }
@@ -420,36 +563,162 @@
     text-decoration: none;
   }
   .wa-float:hover { transform: scale(1.1); }
+  .wa-float svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+  }
 
   /* ── PORTFOLIO BACK BUTTON ── */
-  <a href="https://www.vixel.in/" 
-   id="back-btn"
-   style="
-     position:fixed;
-     bottom:20px;
-     left:20px;
-     z-index:9999;
-     display:inline-flex;
-     align-items:center;
-     gap:8px;
-     padding:10px 18px;
-     background:rgba(10,22,40,0.88);
-     backdrop-filter:blur(12px);
-     color:#fff;
-     font-family:'Outfit',sans-serif;
-     font-size:13px;
-     font-weight:600;
-     border-radius:999px;
-     border:1px solid rgba(255,255,255,0.12);
-     box-shadow:0 8px 24px rgba(0,0,0,0.2);
-     text-decoration:none;
-     transition:all 0.25s ease;
-     white-space:nowrap;
-   "
-   onmouseover="this.style.background='rgba(21,81,230,0.92)';this.style.borderColor='rgba(255,255,255,0.2)'"
-   onmouseout="this.style.background='rgba(10,22,40,0.88)';this.style.borderColor='rgba(255,255,255,0.12)'"
->
-  ← Back to Portfolio
+  .portfolio-back {
+    position: fixed; bottom: 24px; left: 24px; z-index: 200;
+    background: rgba(42,36,32,0.9); color: rgba(255,255,255,0.9);
+    padding: 11px 20px; border-radius: 28px;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.2px;
+    text-decoration: none; backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: all 0.3s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  }
+  .portfolio-back:hover {
+    background: var(--rose);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(201,132,122,0.35);
+    color: white;
+  }
+  .portfolio-back svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up { opacity: 0; transform: translateY(24px); transition: all 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── TABLET ── */
+  @media (max-width: 1024px) {
+    nav { padding: 16px 32px; }
+    .section { padding: 80px 40px; }
+    .hero-left { padding: 60px 40px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-section { padding: 80px 40px; gap: 48px; }
+    .ba-grid { grid-template-columns: repeat(2, 1fr); }
+    .doctors-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .t-grid { grid-template-columns: repeat(2, 1fr); }
+    .booking-section { padding: 80px 40px; gap: 48px; }
+    footer { padding: 40px; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 32px 20px 40px; order: 2; }
+    .hero-right { height: 300px; order: 1; }
+    .hero-title { font-size: 36px; }
+    .hero-sub { font-size: 14px; margin-bottom: 32px; }
+    .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; }
+    .btn-primary { padding: 14px 28px; }
+    .btn-ghost { justify-content: center; }
+    .hero-stats { gap: 24px; margin-top: 40px; padding-top: 32px; }
+    .stat-num { font-size: 28px; }
+    .hero-circle-outer { width: 200px; height: 200px; }
+    .hero-circle-inner { width: 140px; height: 140px; }
+    .floating-card { padding: 10px 14px; font-size: 11px; }
+    .fc-1 { bottom: 80px; left: 20px; }
+    .fc-2 { top: 100px; right: 20px; }
+    .fc-val { font-size: 12px; }
+    
+    .section { padding: 60px 20px; }
+    .section-title { font-size: 28px; margin-bottom: 40px; }
+    .services-grid { grid-template-columns: 1fr; gap: 1px; }
+    .service-card { padding: 28px 24px; }
+    .service-icon { width: 48px; height: 48px; }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-name { font-size: 20px; }
+    
+    .why-section { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
+    .why-num { font-size: 32px; min-width: 40px; }
+    .why-item { gap: 16px; padding: 20px 0; }
+    
+    .ba-section { padding: 60px 20px; }
+    .ba-grid { grid-template-columns: 1fr; gap: 20px; }
+    .ba-img { height: 200px; }
+    
+    .doctors-section { padding: 60px 20px; }
+    .doctors-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .doctor-avatar { width: 80px; height: 80px; }
+    .doctor-avatar svg { width: 32px; height: 32px; }
+    .doctor-name { font-size: 18px; }
+    .doctor-spec { font-size: 11px; }
+    .doctor-exp { font-size: 11px; }
+    
+    .testimonials { padding: 60px 20px; }
+    .t-grid { grid-template-columns: 1fr; gap: 16px; }
+    .t-card { padding: 24px 20px; }
+    
+    .booking-section { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
+    .booking-options { flex-direction: column; }
+    .book-option { justify-content: center; padding: 12px 16px; }
+    .form-card { padding: 28px 20px; }
+    .form-title { font-size: 22px; }
+    
+    footer { 
+      flex-direction: column; 
+      gap: 20px; 
+      text-align: center; 
+      padding: 36px 20px; 
+    }
+    .footer-links { justify-content: center; gap: 16px; }
+    
+    .portfolio-back { bottom: 16px; left: 16px; padding: 9px 14px; font-size: 11px; }
+    .wa-float { bottom: 16px; right: 16px; width: 48px; height: 48px; }
+    .wa-float svg { width: 24px; height: 24px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 32px; }
+    .hero-tag { font-size: 9px; letter-spacing: 2px; }
+    .stat-item { min-width: calc(50% - 12px); }
+    .doctors-grid { grid-template-columns: 1fr; }
+    .doctor-avatar { width: 100px; height: 100px; }
+    .doctor-avatar svg { width: 40px; height: 40px; }
+    .nav-logo { font-size: 18px; }
+    .mobile-menu a { font-size: 28px; }
+    .hero-circle-outer { width: 180px; height: 180px; }
+    .hero-circle-inner { width: 120px; height: 120px; }
+  }
+
+  @media (max-width: 360px) {
+    .hero-title { font-size: 28px; }
+    .section-title { font-size: 24px; }
+    .hero-stats { gap: 16px; }
+    .stat-num { font-size: 24px; }
+  }
+
+  /* Prevent body scroll when mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<!-- Portfolio back button -->
+<a href="https://YOUR-GITHUB-USERNAME.github.io" class="portfolio-back">
+  <svg viewBox="0 0 14 14">
+    <path d="M9 2L4 7l5 5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  Back to Portfolio
 </a>
 
 <!-- NAV -->
@@ -462,7 +731,21 @@
     <li><a href="#booking">Book</a></li>
   </ul>
   <a href="#booking" class="nav-cta">Book Consultation</a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">Treatments</a>
+  <a href="#doctors">Our Team</a>
+  <a href="#results">Results</a>
+  <a href="#booking">Book</a>
+  <a href="#booking" class="nav-cta">Book Consultation</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -504,7 +787,7 @@
     <div class="hero-img-bg"></div>
     <div class="hero-pattern"></div>
     <div class="hero-visual">
-      <div class="hero-circle-outer" style="position:relative">
+      <div class="hero-circle-outer">
         <div class="orbit-dot"></div>
         <div class="orbit-dot"></div>
         <div class="orbit-dot"></div>
@@ -522,11 +805,21 @@
     <div class="floating-card fc-1">
       <div class="fc-label">Next Available</div>
       <div class="fc-val">Today, 3:00 PM</div>
-      <div class="fc-badge">✓ Confirmed</div>
+      <div class="fc-badge">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        Confirmed
+      </div>
     </div>
     <div class="floating-card fc-2">
       <div class="fc-label">Google Rating</div>
-      <div class="fc-val">4.9 ★ · 340 reviews</div>
+      <div class="fc-val">4.9 
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#c9a96e" stroke="none" style="vertical-align: -1px; margin: 0 2px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        · 340 reviews
+      </div>
     </div>
   </div>
 </section>
@@ -559,37 +852,71 @@
   <h2 class="section-title">Treatments designed for <em>real results</em></h2>
   <div class="services-grid">
     <div class="service-card fade-up">
-      <div class="service-icon">✨</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+        </svg>
+      </div>
       <div class="service-name">Laser Skin Resurfacing</div>
       <p class="service-desc">Fractional CO₂ and Erbium laser treatments to address pigmentation, texture, and signs of aging with minimal downtime.</p>
       <div class="service-price">Starting ₹4,999 per session</div>
     </div>
     <div class="service-card fade-up">
-      <div class="service-icon">💧</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+        </svg>
+      </div>
       <div class="service-name">Acne & Scar Treatment</div>
       <p class="service-desc">Medically proven protocols combining chemical peels, microneedling, and targeted therapies for clear, even skin.</p>
       <div class="service-price">Starting ₹2,999 per session</div>
     </div>
     <div class="service-card fade-up">
-      <div class="service-icon">🌿</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <path d="M12 8v4M12 16h.01"></path>
+        </svg>
+      </div>
       <div class="service-name">PRP Hair Restoration</div>
       <p class="service-desc">Platelet-rich plasma therapy to stimulate natural hair regrowth, backed by clinical studies and visible results in 8 weeks.</p>
       <div class="service-price">Starting ₹6,999 per session</div>
     </div>
     <div class="service-card fade-up">
-      <div class="service-icon">⚡</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+      </div>
       <div class="service-name">Laser Hair Removal</div>
       <p class="service-desc">FDA-cleared diode laser for permanent hair reduction on all skin types. Safe, effective, and virtually painless.</p>
       <div class="service-price">Starting ₹1,999 per session</div>
     </div>
     <div class="service-card fade-up">
-      <div class="service-icon">🌸</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </div>
       <div class="service-name">Anti-Aging & Fillers</div>
       <p class="service-desc">Botox, hyaluronic acid fillers, and thread lifts for natural-looking rejuvenation. No surgery, no downtime.</p>
       <div class="service-price">Starting ₹8,999 per treatment</div>
     </div>
     <div class="service-card fade-up">
-      <div class="service-icon">☀️</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </div>
       <div class="service-name">Skin Brightening</div>
       <p class="service-desc">Customised glutathione and vitamin infusion therapies combined with targeted depigmentation protocols.</p>
       <div class="service-price">Starting ₹3,499 per session</div>
@@ -643,7 +970,14 @@
   <div class="ba-grid">
     <div class="ba-card">
       <div class="ba-img">
-        <div class="ba-placeholder">✦</div>
+        <div class="ba-placeholder">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+        </div>
         <div class="ba-tag">Before → After</div>
       </div>
       <div class="ba-info">
@@ -653,7 +987,11 @@
     </div>
     <div class="ba-card">
       <div class="ba-img" style="background: linear-gradient(135deg, #ddd5cc, #ccc0b8)">
-        <div class="ba-placeholder">✦</div>
+        <div class="ba-placeholder">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+          </svg>
+        </div>
         <div class="ba-tag">Before → After</div>
       </div>
       <div class="ba-info">
@@ -663,7 +1001,14 @@
     </div>
     <div class="ba-card">
       <div class="ba-img" style="background: linear-gradient(135deg, #e0d8d2, #d0c8c2)">
-        <div class="ba-placeholder">✦</div>
+        <div class="ba-placeholder">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
         <div class="ba-tag">Before → After</div>
       </div>
       <div class="ba-info">
@@ -680,19 +1025,34 @@
   <h2 class="section-title">Meet the team behind <em>your glow</em></h2>
   <div class="doctors-grid">
     <div class="doctor-card fade-up">
-      <div class="doctor-avatar">👩‍⚕️</div>
+      <div class="doctor-avatar">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
       <div class="doctor-name">Dr. Priya Sharma</div>
       <div class="doctor-spec">MD Dermatology · AIIMS Delhi</div>
       <div class="doctor-exp">14 years experience</div>
     </div>
     <div class="doctor-card fade-up">
-      <div class="doctor-avatar">👨‍⚕️</div>
+      <div class="doctor-avatar">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
       <div class="doctor-name">Dr. Arjun Mehta</div>
       <div class="doctor-spec">Cosmetic Dermatologist</div>
       <div class="doctor-exp">9 years experience</div>
     </div>
     <div class="doctor-card fade-up">
-      <div class="doctor-avatar">👩‍⚕️</div>
+      <div class="doctor-avatar">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
       <div class="doctor-name">Dr. Kavya Nair</div>
       <div class="doctor-spec">Trichologist · Hair Specialist</div>
       <div class="doctor-exp">7 years experience</div>
@@ -706,19 +1066,37 @@
   <h2 class="section-title">What Lucknow is <em>saying</em></h2>
   <div class="t-grid">
     <div class="t-card fade-up">
-      <div class="t-stars">★★★★★</div>
+      <div class="t-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
       <p class="t-text">"After struggling with acne scars for 6 years, GlowSkin gave me skin I actually feel confident in. The results after just 4 sessions were unbelievable."</p>
       <div class="t-author">Priyanka S.</div>
       <div class="t-tag">Acne Scar Treatment</div>
     </div>
     <div class="t-card fade-up">
-      <div class="t-stars">★★★★★</div>
+      <div class="t-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
       <p class="t-text">"The doctors here actually explain everything before doing anything. I've been to 3 clinics before this — none of them came close to the professionalism here."</p>
       <div class="t-author">Rahul M.</div>
       <div class="t-tag">Laser Hair Removal</div>
     </div>
     <div class="t-card fade-up">
-      <div class="t-stars">★★★★★</div>
+      <div class="t-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
       <p class="t-text">"My PRP results started showing in just 6 weeks. The staff remembered my name every single visit. That kind of care is rare."</p>
       <div class="t-author">Ananya K.</div>
       <div class="t-tag">PRP Hair Restoration</div>
@@ -734,10 +1112,13 @@
     <p class="booking-sub">Book a 30-minute skin analysis with one of our dermatologists. No pressure, no commitment — just clarity on what your skin actually needs.</p>
     <div class="booking-options">
       <a href="tel:+911234567890" class="book-option">
-        📞 Call Now
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        Call Now
       </a>
       <a href="https://wa.me/911234567890?text=Hi, I'd like to book a free skin consultation" class="book-option wa">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp Us
       </a>
     </div>
@@ -745,31 +1126,39 @@
   <div class="booking-right">
     <div class="form-card">
       <div class="form-title">Book Your Consultation</div>
-      <div class="form-group">
-        <label class="form-label">Full Name</label>
-        <input type="text" class="form-input" placeholder="Your name"/>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Phone Number</label>
-        <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX"/>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Concern</label>
-        <select class="form-select">
-          <option>Select your main concern</option>
-          <option>Acne & Scars</option>
-          <option>Pigmentation</option>
-          <option>Hair Loss</option>
-          <option>Anti-Aging</option>
-          <option>Laser Hair Removal</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Preferred Date</label>
-        <input type="date" class="form-input"/>
-      </div>
-      <button class="form-btn">Request Free Consultation →</button>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Your name" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Concern</label>
+          <select class="form-select" required>
+            <option value="">Select your main concern</option>
+            <option>Acne & Scars</option>
+            <option>Pigmentation</option>
+            <option>Hair Loss</option>
+            <option>Anti-Aging</option>
+            <option>Laser Hair Removal</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred Date</label>
+          <input type="date" class="form-input" required/>
+        </div>
+        <button type="submit" class="form-btn">
+          Request Free Consultation
+          <svg viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
     </div>
   </div>
 </section>
@@ -787,25 +1176,30 @@
 </footer>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/911234567890" class="wa-float" target="_blank">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/911234567890" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
-  // Fade-up on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const body = document.body;
+  const mobileLinks = mobileMenu.querySelectorAll('a');
 
-  // Form submit
-  document.querySelector('.form-btn').addEventListener('click', function() {
-    const name = document.querySelector('input[type="text"]').value;
-    if (!name) { alert('Please enter your name.'); return; }
-    this.textContent = '✓ Request Sent! We\'ll call you shortly.';
-    this.style.background = '#22c55e';
-    this.disabled = true;
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    body.classList.toggle('menu-open');
   });
-</script>
-</body>
-</html>
+
+  // Close mobile menu when clicking a link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      body.classList.remove('menu-open');
+    });
+  });
+
+  // Close menu
