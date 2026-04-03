@@ -422,44 +422,35 @@
   .wa-float:hover { transform: scale(1.1); }
 
   /* ── PORTFOLIO BACK BUTTON ── */
-  .portfolio-back {
-    position: fixed; top: 20px; left: 20px; z-index: 200;
-    background: rgba(42,36,32,0.85); color: white;
-    padding: 8px 16px; border-radius: 20px;
-    font-size: 11px; font-weight: 500; letter-spacing: 0.5px;
-    text-decoration: none; backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: all 0.3s;
-  }
-  .portfolio-back:hover { background: var(--rose); border-color: transparent; }
-
-  /* ── ANIMATIONS ── */
-  .fade-up { opacity: 0; transform: translateY(24px); transition: all 0.7s ease; }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-  /* ── MOBILE ── */
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 48px 24px; }
-    .hero-right { height: 300px; }
-    .section { padding: 64px 24px; }
-    .services-grid { grid-template-columns: 1fr; }
-    .why-section { grid-template-columns: 1fr; padding: 64px 24px; gap: 48px; }
-    .ba-grid { grid-template-columns: 1fr; }
-    .doctors-grid { grid-template-columns: 1fr 1fr; }
-    .t-grid { grid-template-columns: 1fr; }
-    .booking-section { grid-template-columns: 1fr; padding: 64px 24px; gap: 48px; }
-    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 24px; }
-    .hero-stats { gap: 24px; }
-  }
-</style>
-</head>
-<body>
-
-<!-- Portfolio back button -->
-<a href="https://www.vixel.in/" class="portfolio-back">← Portfolio</a>
+  <a href="https://www.vixel.in/" 
+   id="back-btn"
+   style="
+     position:fixed;
+     bottom:20px;
+     left:20px;
+     z-index:9999;
+     display:inline-flex;
+     align-items:center;
+     gap:8px;
+     padding:10px 18px;
+     background:rgba(10,22,40,0.88);
+     backdrop-filter:blur(12px);
+     color:#fff;
+     font-family:'Outfit',sans-serif;
+     font-size:13px;
+     font-weight:600;
+     border-radius:999px;
+     border:1px solid rgba(255,255,255,0.12);
+     box-shadow:0 8px 24px rgba(0,0,0,0.2);
+     text-decoration:none;
+     transition:all 0.25s ease;
+     white-space:nowrap;
+   "
+   onmouseover="this.style.background='rgba(21,81,230,0.92)';this.style.borderColor='rgba(255,255,255,0.2)'"
+   onmouseout="this.style.background='rgba(10,22,40,0.88)';this.style.borderColor='rgba(255,255,255,0.12)'"
+>
+  ← Back to Portfolio
+</a>
 
 <!-- NAV -->
 <nav>
