@@ -135,23 +135,8 @@
     font-size: 12px;
   }
 
-  /* ── LINE ART ICONS ── */
-  .line-icon {
-    width: 32px;
-    height: 32px;
-    stroke: var(--rose);
-    stroke-width: 1.2;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .line-icon-sm {
-    width: 24px;
-    height: 24px;
-  }
-  .line-icon-lg {
-    width: 48px;
-    height: 48px;
+  body.menu-open {
+    overflow: hidden;
   }
 
   /* ── HERO ── */
@@ -185,14 +170,13 @@
     font-size: 15px; font-weight: 300; line-height: 1.8;
     color: var(--mid); max-width: 420px; margin-bottom: 44px;
   }
-  .hero-btns { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .hero-btns { display: flex; gap: 16px; align-items: center; }
   .btn-primary {
     background: var(--charcoal); color: white;
     padding: 16px 36px; border-radius: 2px;
     font-size: 11px; font-weight: 600; letter-spacing: 2px;
     text-transform: uppercase; text-decoration: none;
     transition: all 0.3s;
-    text-align: center;
   }
   .btn-primary:hover { background: var(--rose); }
   .btn-ghost {
@@ -207,7 +191,6 @@
   .hero-stats {
     display: flex; gap: 40px; margin-top: 56px;
     padding-top: 40px; border-top: 1px solid rgba(201,132,122,0.2);
-    flex-wrap: wrap;
   }
   .stat-item { }
   .stat-num {
@@ -246,7 +229,6 @@
     border: 1px solid rgba(201,132,122,0.2);
     display: flex; align-items: center; justify-content: center;
     animation: slowSpin 20s linear infinite;
-    position: relative;
   }
   .hero-circle-inner {
     width: 280px; height: 280px; border-radius: 50%;
@@ -338,16 +320,16 @@
   .service-card:hover::before { transform: scaleX(1); }
   .service-card:hover { background: white; }
   .service-icon {
-    width: 56px; height: 56px; border-radius: 50%;
-    background: rgba(201,132,122,0.08);
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(201,132,122,0.1);
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 24px;
   }
   .service-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     stroke: var(--rose);
-    stroke-width: 1.2;
+    stroke-width: 1.5;
     fill: none;
   }
   .service-name {
@@ -405,10 +387,10 @@
     opacity: 0.3;
   }
   .ba-placeholder svg {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     stroke: var(--rose);
-    stroke-width: 0.8;
+    stroke-width: 1;
     fill: none;
   }
   .ba-tag {
@@ -454,12 +436,12 @@
   }
   .t-stars { 
     display: flex; 
-    gap: 4px; 
+    gap: 2px; 
     margin-bottom: 16px; 
   }
   .t-stars svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     fill: var(--gold);
     stroke: none;
   }
@@ -479,7 +461,7 @@
   .booking-left .section-title { color: white; margin-bottom: 20px; max-width: none; }
   .booking-left .section-title em { color: var(--rose-light); }
   .booking-sub { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.8; margin-bottom: 36px; }
-  .booking-options { display: flex; gap: 16px; flex-wrap: wrap; }
+  .booking-options { display: flex; gap: 16px; }
   .book-option {
     display: flex; align-items: center; gap: 10px;
     background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
@@ -493,6 +475,13 @@
   .book-option svg {
     width: 18px;
     height: 18px;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+  }
+  .book-option.wa svg {
+    fill: #25d366;
+    stroke: none;
   }
   .booking-right { }
   .form-card {
@@ -513,10 +502,6 @@
     border: 1px solid rgba(201,132,122,0.2); border-radius: 4px;
     font-family: 'Jost', sans-serif; font-size: 14px; color: var(--charcoal);
     background: var(--cream); outline: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b5f58' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
   }
   .form-btn {
     width: 100%; background: var(--rose); color: white;
@@ -524,31 +509,21 @@
     font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
     letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
     transition: background 0.3s; margin-top: 8px;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
   }
   .form-btn:hover { background: var(--rose-dark); }
-  .form-btn svg {
-    width: 16px;
-    height: 16px;
-    stroke: white;
-    stroke-width: 2;
-    fill: none;
-  }
 
   /* ── FOOTER ── */
   footer {
     background: var(--charcoal); color: rgba(255,255,255,0.4);
     padding: 48px 80px;
     display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
   }
   .footer-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px; font-weight: 400; color: white; letter-spacing: 2px;
   }
   .footer-logo span { color: var(--rose); }
-  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-links { display: flex; gap: 24px; }
   .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.3s; }
   .footer-links a:hover { color: var(--rose); }
   .footer-copy { font-size: 11px; }
@@ -563,11 +538,6 @@
     text-decoration: none;
   }
   .wa-float:hover { transform: scale(1.1); }
-  .wa-float svg {
-    width: 28px;
-    height: 28px;
-    fill: white;
-  }
 
   /* ── PORTFOLIO BACK BUTTON ── */
   .portfolio-back {
@@ -588,33 +558,27 @@
     box-shadow: 0 8px 24px rgba(201,132,122,0.35);
     color: white;
   }
-  .portfolio-back svg {
-    width: 14px;
-    height: 14px;
-    stroke: currentColor;
-    stroke-width: 1.5;
-    fill: none;
-  }
 
   /* ── ANIMATIONS ── */
   .fade-up { opacity: 0; transform: translateY(24px); transition: all 0.7s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── TABLET ── */
+  /* ── MOBILE RESPONSIVE ── */
   @media (max-width: 1024px) {
-    nav { padding: 16px 32px; }
-    .section { padding: 80px 40px; }
-    .hero-left { padding: 60px 40px; }
+    nav { padding: 18px 32px; }
+    .section { padding: 80px 48px; }
+    .hero-left { padding: 60px 48px; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .why-section { padding: 80px 40px; gap: 48px; }
+    .why-section { padding: 80px 48px; gap: 48px; }
+    .ba-section { padding: 80px 48px; }
     .ba-grid { grid-template-columns: repeat(2, 1fr); }
-    .doctors-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .doctors-section { padding: 80px 48px; }
+    .testimonials { padding: 80px 48px; }
     .t-grid { grid-template-columns: repeat(2, 1fr); }
-    .booking-section { padding: 80px 40px; gap: 48px; }
-    footer { padding: 40px; }
+    .booking-section { padding: 80px 48px; gap: 48px; }
+    footer { padding: 40px 48px; }
   }
 
-  /* ── MOBILE ── */
   @media (max-width: 768px) {
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
@@ -622,92 +586,76 @@
     .hamburger { display: flex; }
     
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 32px 20px 40px; order: 2; }
-    .hero-right { height: 300px; order: 1; }
+    .hero-left { padding: 40px 20px 32px; order: 2; }
+    .hero-right { height: 280px; order: 1; }
     .hero-title { font-size: 36px; }
     .hero-sub { font-size: 14px; margin-bottom: 32px; }
-    .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; }
-    .btn-primary { padding: 14px 28px; }
-    .btn-ghost { justify-content: center; }
-    .hero-stats { gap: 24px; margin-top: 40px; padding-top: 32px; }
+    .hero-btns { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .btn-primary { padding: 14px 28px; width: 100%; text-align: center; }
+    .btn-ghost { justify-content: center; width: 100%; }
+    .hero-stats { gap: 20px; flex-wrap: wrap; margin-top: 40px; padding-top: 32px; }
     .stat-num { font-size: 28px; }
-    .hero-circle-outer { width: 200px; height: 200px; }
-    .hero-circle-inner { width: 140px; height: 140px; }
+    .hero-circle-outer { width: 220px; height: 220px; }
+    .hero-circle-inner { width: 160px; height: 160px; }
     .floating-card { padding: 10px 14px; font-size: 11px; }
-    .fc-1 { bottom: 80px; left: 20px; }
-    .fc-2 { top: 100px; right: 20px; }
+    .fc-1 { bottom: 60px; left: 20px; }
+    .fc-2 { top: 80px; right: 20px; }
     .fc-val { font-size: 12px; }
     
-    .section { padding: 60px 20px; }
+    .section { padding: 56px 20px; }
     .section-title { font-size: 28px; margin-bottom: 40px; }
     .services-grid { grid-template-columns: 1fr; gap: 1px; }
     .service-card { padding: 28px 24px; }
-    .service-icon { width: 48px; height: 48px; }
-    .service-icon svg { width: 24px; height: 24px; }
-    .service-name { font-size: 20px; }
     
-    .why-section { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
+    .why-section { grid-template-columns: 1fr; padding: 56px 20px; gap: 40px; }
     .why-num { font-size: 32px; min-width: 40px; }
     .why-item { gap: 16px; padding: 20px 0; }
     
-    .ba-section { padding: 60px 20px; }
+    .ba-section { padding: 56px 20px; }
     .ba-grid { grid-template-columns: 1fr; gap: 20px; }
     .ba-img { height: 200px; }
     
-    .doctors-section { padding: 60px 20px; }
-    .doctors-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .doctor-avatar { width: 80px; height: 80px; }
-    .doctor-avatar svg { width: 32px; height: 32px; }
+    .doctors-section { padding: 56px 20px; }
+    .doctors-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .doctor-avatar { width: 90px; height: 90px; }
+    .doctor-avatar svg { width: 36px; height: 36px; }
     .doctor-name { font-size: 18px; }
     .doctor-spec { font-size: 11px; }
     .doctor-exp { font-size: 11px; }
     
-    .testimonials { padding: 60px 20px; }
+    .testimonials { padding: 56px 20px; }
     .t-grid { grid-template-columns: 1fr; gap: 16px; }
     .t-card { padding: 24px 20px; }
     
-    .booking-section { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
+    .booking-section { grid-template-columns: 1fr; padding: 56px 20px; gap: 40px; }
     .booking-options { flex-direction: column; }
-    .book-option { justify-content: center; padding: 12px 16px; }
+    .book-option { justify-content: center; }
     .form-card { padding: 28px 20px; }
     .form-title { font-size: 22px; }
     
-    footer { 
-      flex-direction: column; 
-      gap: 20px; 
-      text-align: center; 
-      padding: 36px 20px; 
-    }
-    .footer-links { justify-content: center; gap: 16px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 20px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
     
     .portfolio-back { bottom: 16px; left: 16px; padding: 9px 14px; font-size: 11px; }
     .wa-float { bottom: 16px; right: 16px; width: 48px; height: 48px; }
-    .wa-float svg { width: 24px; height: 24px; }
   }
 
   @media (max-width: 480px) {
     .hero-title { font-size: 32px; }
     .hero-tag { font-size: 9px; letter-spacing: 2px; }
-    .stat-item { min-width: calc(50% - 12px); }
+    .stat-item { min-width: calc(50% - 10px); }
+    .hero-circle-outer { width: 180px; height: 180px; }
+    .hero-circle-inner { width: 130px; height: 130px; }
+    .floating-card { display: none; }
+    .mobile-menu a { font-size: 28px; }
+  }
+
+  @media (max-width: 400px) {
+    .hero-title { font-size: 28px; }
     .doctors-grid { grid-template-columns: 1fr; }
     .doctor-avatar { width: 100px; height: 100px; }
-    .doctor-avatar svg { width: 40px; height: 40px; }
     .nav-logo { font-size: 18px; }
-    .mobile-menu a { font-size: 28px; }
-    .hero-circle-outer { width: 180px; height: 180px; }
-    .hero-circle-inner { width: 120px; height: 120px; }
-  }
-
-  @media (max-width: 360px) {
-    .hero-title { font-size: 28px; }
     .section-title { font-size: 24px; }
-    .hero-stats { gap: 16px; }
-    .stat-num { font-size: 24px; }
-  }
-
-  /* Prevent body scroll when mobile menu is open */
-  body.menu-open {
-    overflow: hidden;
   }
 </style>
 </head>
@@ -715,9 +663,7 @@
 
 <!-- Portfolio back button -->
 <a href="https://YOUR-GITHUB-USERNAME.github.io" class="portfolio-back">
-  <svg viewBox="0 0 14 14">
-    <path d="M9 2L4 7l5 5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   Back to Portfolio
 </a>
 
@@ -787,7 +733,7 @@
     <div class="hero-img-bg"></div>
     <div class="hero-pattern"></div>
     <div class="hero-visual">
-      <div class="hero-circle-outer">
+      <div class="hero-circle-outer" style="position:relative">
         <div class="orbit-dot"></div>
         <div class="orbit-dot"></div>
         <div class="orbit-dot"></div>
@@ -806,7 +752,7 @@
       <div class="fc-label">Next Available</div>
       <div class="fc-val">Today, 3:00 PM</div>
       <div class="fc-badge">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
         Confirmed
@@ -815,7 +761,7 @@
     <div class="floating-card fc-2">
       <div class="fc-label">Google Rating</div>
       <div class="fc-val">4.9 
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="#c9a96e" stroke="none" style="vertical-align: -1px; margin: 0 2px;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#c9a96e" stroke="none" style="vertical-align: -1px;">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
         </svg>
         · 340 reviews
@@ -853,9 +799,9 @@
   <div class="services-grid">
     <div class="service-card fade-up">
       <div class="service-icon">
+        <!-- Sparkle/Laser icon -->
         <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="3"></circle>
-          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          <path d="M12 3v4m0 10v4M5.64 5.64l2.83 2.83m7.07 7.07l2.83 2.83M3 12h4m10 0h4M5.64 18.36l2.83-2.83m7.07-7.07l2.83-2.83"/>
         </svg>
       </div>
       <div class="service-name">Laser Skin Resurfacing</div>
@@ -864,8 +810,9 @@
     </div>
     <div class="service-card fade-up">
       <div class="service-icon">
+        <!-- Droplet icon -->
         <svg viewBox="0 0 24 24">
-          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
         </svg>
       </div>
       <div class="service-name">Acne & Scar Treatment</div>
@@ -874,9 +821,10 @@
     </div>
     <div class="service-card fade-up">
       <div class="service-icon">
+        <!-- Leaf/Nature icon -->
         <svg viewBox="0 0 24 24">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          <path d="M12 8v4M12 16h.01"></path>
+          <path d="M6.5 12c0-5.5 4-7.5 8-9.5-.5 4 1.5 6 1.5 10 0 4.5-3.5 8-7 8s-7-3.5-2.5-8.5"/>
+          <path d="M9 21c0-3 1.5-5.5 3.5-7"/>
         </svg>
       </div>
       <div class="service-name">PRP Hair Restoration</div>
@@ -885,8 +833,9 @@
     </div>
     <div class="service-card fade-up">
       <div class="service-icon">
+        <!-- Bolt/Lightning icon -->
         <svg viewBox="0 0 24 24">
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
         </svg>
       </div>
       <div class="service-name">Laser Hair Removal</div>
@@ -895,8 +844,10 @@
     </div>
     <div class="service-card fade-up">
       <div class="service-icon">
+        <!-- Flower/Bloom icon -->
         <svg viewBox="0 0 24 24">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 2a4 4 0 0 1 0 6 4 4 0 0 1 0-6zM12 16a4 4 0 0 1 0 6 4 4 0 0 1 0-6zM2 12a4 4 0 0 1 6 0 4 4 0 0 1-6 0zM16 12a4 4 0 0 1 6 0 4 4 0 0 1-6 0z"/>
         </svg>
       </div>
       <div class="service-name">Anti-Aging & Fillers</div>
@@ -905,16 +856,17 @@
     </div>
     <div class="service-card fade-up">
       <div class="service-icon">
+        <!-- Sun icon -->
         <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
       </div>
       <div class="service-name">Skin Brightening</div>
@@ -971,11 +923,9 @@
     <div class="ba-card">
       <div class="ba-img">
         <div class="ba-placeholder">
+          <!-- Diamond/Sparkle icon -->
           <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2"/>
           </svg>
         </div>
         <div class="ba-tag">Before → After</div>
@@ -989,7 +939,7 @@
       <div class="ba-img" style="background: linear-gradient(135deg, #ddd5cc, #ccc0b8)">
         <div class="ba-placeholder">
           <svg viewBox="0 0 24 24">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+            <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2"/>
           </svg>
         </div>
         <div class="ba-tag">Before → After</div>
@@ -1003,10 +953,7 @@
       <div class="ba-img" style="background: linear-gradient(135deg, #e0d8d2, #d0c8c2)">
         <div class="ba-placeholder">
           <svg viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2"/>
           </svg>
         </div>
         <div class="ba-tag">Before → After</div>
@@ -1026,9 +973,12 @@
   <div class="doctors-grid">
     <div class="doctor-card fade-up">
       <div class="doctor-avatar">
+        <!-- Female Doctor icon -->
         <svg viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+          <path d="M12 4c-.5-1.5-2-2-3-2"/>
+          <path d="M12 4c.5-1.5 2-2 3-2"/>
         </svg>
       </div>
       <div class="doctor-name">Dr. Priya Sharma</div>
@@ -1037,9 +987,10 @@
     </div>
     <div class="doctor-card fade-up">
       <div class="doctor-avatar">
+        <!-- Male Doctor icon -->
         <svg viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
         </svg>
       </div>
       <div class="doctor-name">Dr. Arjun Mehta</div>
@@ -1048,9 +999,12 @@
     </div>
     <div class="doctor-card fade-up">
       <div class="doctor-avatar">
+        <!-- Female Doctor icon -->
         <svg viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+          <path d="M12 4c-.5-1.5-2-2-3-2"/>
+          <path d="M12 4c.5-1.5 2-2 3-2"/>
         </svg>
       </div>
       <div class="doctor-name">Dr. Kavya Nair</div>
@@ -1067,11 +1021,11 @@
   <div class="t-grid">
     <div class="t-card fade-up">
       <div class="t-stars">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
       <p class="t-text">"After struggling with acne scars for 6 years, GlowSkin gave me skin I actually feel confident in. The results after just 4 sessions were unbelievable."</p>
       <div class="t-author">Priyanka S.</div>
@@ -1079,11 +1033,11 @@
     </div>
     <div class="t-card fade-up">
       <div class="t-stars">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
       <p class="t-text">"The doctors here actually explain everything before doing anything. I've been to 3 clinics before this — none of them came close to the professionalism here."</p>
       <div class="t-author">Rahul M.</div>
@@ -1091,11 +1045,11 @@
     </div>
     <div class="t-card fade-up">
       <div class="t-stars">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
       <p class="t-text">"My PRP results started showing in just 6 weeks. The staff remembered my name every single visit. That kind of care is rare."</p>
       <div class="t-author">Ananya K.</div>
@@ -1112,13 +1066,14 @@
     <p class="booking-sub">Book a 30-minute skin analysis with one of our dermatologists. No pressure, no commitment — just clarity on what your skin actually needs.</p>
     <div class="booking-options">
       <a href="tel:+911234567890" class="book-option">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <!-- Phone icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
         Call Now
       </a>
       <a href="https://wa.me/911234567890?text=Hi, I'd like to book a free skin consultation" class="book-option wa">
-        <svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp Us
       </a>
     </div>
@@ -1126,39 +1081,31 @@
   <div class="booking-right">
     <div class="form-card">
       <div class="form-title">Book Your Consultation</div>
-      <form id="bookingForm">
-        <div class="form-group">
-          <label class="form-label">Full Name</label>
-          <input type="text" class="form-input" placeholder="Your name" required/>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Phone Number</label>
-          <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required/>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Concern</label>
-          <select class="form-select" required>
-            <option value="">Select your main concern</option>
-            <option>Acne & Scars</option>
-            <option>Pigmentation</option>
-            <option>Hair Loss</option>
-            <option>Anti-Aging</option>
-            <option>Laser Hair Removal</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Preferred Date</label>
-          <input type="date" class="form-input" required/>
-        </div>
-        <button type="submit" class="form-btn">
-          Request Free Consultation
-          <svg viewBox="0 0 24 24">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </button>
-      </form>
+      <div class="form-group">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-input" placeholder="Your name"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Concern</label>
+        <select class="form-select">
+          <option>Select your main concern</option>
+          <option>Acne & Scars</option>
+          <option>Pigmentation</option>
+          <option>Hair Loss</option>
+          <option>Anti-Aging</option>
+          <option>Laser Hair Removal</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Preferred Date</label>
+        <input type="date" class="form-input"/>
+      </div>
+      <button class="form-btn">Request Free Consultation →</button>
     </div>
   </div>
 </section>
@@ -1176,8 +1123,8 @@
 </footer>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/911234567890" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/911234567890" class="wa-float" target="_blank">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
@@ -1202,4 +1149,20 @@
     });
   });
 
-  // Close menu
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submit
+  document.querySelector('.form-btn').addEventListener('click', function() {
+    const name = document.querySelector('input[type="text"]').value;
+    if (!name) { alert('Please enter your name.'); return; }
+    this.textContent = '✓ Request Sent! We\'ll call you shortly.';
+    this.style.background = '#22c55e';
+    this.disabled = true;
+  });
+</script>
+</body>
+</html>
